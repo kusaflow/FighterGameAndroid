@@ -23,15 +23,50 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
 
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	bool bPunchOn = false;
+	
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	bool bKickOn = false;
+	
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	bool bSpecial = false;
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	short bSpecial = false;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")
+	class UkusaGameInstance* gameInstance;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
+	UFUNCTION()// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
+	UFUNCTION()// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UFUNCTION()
+	void punchOn(float val);
+	
+	UFUNCTION()
+	void kickOn(float val);
+	
+	UFUNCTION()
+	void specialOn(float val);
+
+	UFUNCTION()
+	void FirstAction();
+
+	UFUNCTION()
+	void SecondAction();
+
+	UFUNCTION()
+	void ThirdAction();
 
 };
