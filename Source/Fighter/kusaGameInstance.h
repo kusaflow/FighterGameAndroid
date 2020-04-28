@@ -18,5 +18,8 @@ public:
 	//player variables
 	UPROPERTY()
 	bool punching = false;
+
+	UPROPERTY()
+	int actionIndex = 0;
 	
 };

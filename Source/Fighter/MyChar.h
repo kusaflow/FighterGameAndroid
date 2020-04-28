@@ -33,7 +33,7 @@ public:
 	bool bSpecial = false;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
-	short bSpecial = false;
+	int actionIndex = 0;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")

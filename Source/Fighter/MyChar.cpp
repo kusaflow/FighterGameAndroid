@@ -41,6 +41,10 @@ void AMyChar::Tick(float DeltaTime)
 	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
 
+	gameInstance->punching = bPunchOn;
+	gameInstance->actionIndex = actionIndex;
+
+	actionIndex = 0;
 
 }
 
@@ -77,16 +81,16 @@ void AMyChar::specialOn(float val) {
 
 
 void AMyChar::FirstAction() {
-
+	actionIndex = 1;
 
 }
 
 void AMyChar::SecondAction() {
-
+	actionIndex = 2;
 
 }
 
 void AMyChar::ThirdAction() {
-
+	actionIndex = 3;
 
 }
