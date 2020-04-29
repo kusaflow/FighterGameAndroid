@@ -4,6 +4,7 @@
 #include "kusaAnimInstance.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "kusaGameInstance.h"
+#include "MyChar.h"
 
 void UkusaAnimInstance::NativeInitializeAnimation() {
 	
@@ -11,15 +12,13 @@ void UkusaAnimInstance::NativeInitializeAnimation() {
 
 
 void UkusaAnimInstance::update() {
-	if (Pawn == nullptr) {
-		Pawn = TryGetPawnOwner();
-	}
-	if (Pawn) {
-		gameInstance = Cast<UkusaGameInstance>(Pawn->GetGameInstance());
-		if (gameInstance) {
-			punching = gameInstance->punching;
-			actionIndex = gameInstance->actionIndex;
-		}
+
+	player = Cast<AMyChar>(TryGetPawnOwner());
+
+	if (player) {
+		punching = player->bPunchOn;
+		actionIndex = player->actionIndex;
+		
 	}
 }
 

@@ -21,11 +21,7 @@ public:
 	void update();
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
-	class APawn* Pawn;
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")
-	class UkusaGameInstance* gameInstance;
+	class AMyChar* player;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	bool punching = false;
