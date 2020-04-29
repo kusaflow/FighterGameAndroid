@@ -27,10 +27,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")
 	class UkusaGameInstance* gameInstance;
 
-	UPROPERTY(BlueprintReadOnly, category = "kusaVar")
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	bool punching = false;
 
-	UPROPERTY(BlueprintReadOnly, category = "kusaVar")
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	int actionIndex = 0;
 	
 };

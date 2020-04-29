@@ -6,9 +6,7 @@
 #include "kusaGameInstance.h"
 
 void UkusaAnimInstance::NativeInitializeAnimation() {
-	if (Pawn == nullptr) {
-		Pawn = TryGetPawnOwner();
-	}
+	
 }
 
 
@@ -18,8 +16,10 @@ void UkusaAnimInstance::update() {
 	}
 	if (Pawn) {
 		gameInstance = Cast<UkusaGameInstance>(Pawn->GetGameInstance());
-		punching = gameInstance->punching;
-		actionIndex = gameInstance->actionIndex;
+		if (gameInstance) {
+			punching = gameInstance->punching;
+			actionIndex = gameInstance->actionIndex;
+		}
 	}
 }
 
