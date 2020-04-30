@@ -33,6 +33,9 @@ public:
 	bool bSpecial = false;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	bool bActionPressed1 = false;
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int actionIndex = 0;
 
 
@@ -67,6 +70,10 @@ public:
 	void SecondAction();
 
 	UFUNCTION()
-	void ThirdAction();
+	void ActionButtonUp();
+
+	UFUNCTION()
+	int GiveMeAction();
+
 
 };

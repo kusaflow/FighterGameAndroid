@@ -20,6 +20,6 @@ public:
 	bool punching = false;
 
 	UPROPERTY()
-	int actionIndex = 0;
+	bool actionPressed1 = false;
 	
 };

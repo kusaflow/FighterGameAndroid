@@ -5,6 +5,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "kusaGameInstance.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 AMyChar::AMyChar()
@@ -40,11 +41,10 @@ void AMyChar::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
-
-	gameInstance->punching = bPunchOn;
-	gameInstance->actionIndex = actionIndex;
+	
 
 	actionIndex = 0;
+	
 
 }
 
@@ -59,8 +59,9 @@ void AMyChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("first", IE_Pressed, this, &AMyChar::FirstAction);
 	PlayerInputComponent->BindAction("second", IE_Pressed, this, &AMyChar::SecondAction);
-	PlayerInputComponent->BindAction("third", IE_Pressed, this, &AMyChar::ThirdAction);
 
+	PlayerInputComponent->BindAction("first", IE_Released, this, &AMyChar::ActionButtonUp);
+	PlayerInputComponent->BindAction("second", IE_Released, this, &AMyChar::ActionButtonUp);
 
 }
 
@@ -72,25 +73,54 @@ void AMyChar::punchOn(float val) {
 }
 
 void AMyChar::kickOn(float val) {
-	bKickOn = true;
+	if (val == 1)
+		bKickOn = true; 
+	else
+		bKickOn= false;
 }
 
 void AMyChar::specialOn(float val) {
-	bSpecial = true;
+	if (val == 1)
+		bSpecial = true;
+	else
+		bSpecial = false;
 }
 
 
 void AMyChar::FirstAction() {
-	actionIndex = 1;
-
+	actionIndex = GiveMeAction();
+	bActionPressed1 = true;
 }
 
 void AMyChar::SecondAction() {
-	actionIndex = 2;
-
+	actionIndex = GiveMeAction();
+	bActionPressed1 = false;
 }
 
-void AMyChar::ThirdAction() {
-	actionIndex = 3;
+void AMyChar::ActionButtonUp() {
+	//actionIndex = 0;
+}
 
+
+int AMyChar::GiveMeAction() {
+	if (bPunchOn) {
+		if (bActionPressed1) {
+			return (int)FMath::FRandRange(1,7);
+		}
+		else {
+			return (int)FMath::FRandRange(1,7);
+		}
+	}
+	else if (bKickOn) {
+		if (bActionPressed1) {
+			return (int)FMath::FRandRange(1, 12);
+		}
+		else {
+			return (int)FMath::FRandRange(1, 12);
+		}
+	}
+	else {
+		
+	}
+	return 0;
 }

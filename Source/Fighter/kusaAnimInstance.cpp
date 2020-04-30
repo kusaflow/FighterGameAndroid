@@ -16,9 +16,9 @@ void UkusaAnimInstance::update() {
 	player = Cast<AMyChar>(TryGetPawnOwner());
 
 	if (player) {
-		punching = player->bPunchOn;
+		bPunching = player->bPunchOn;
+		bActionPressed1 = player->bActionPressed1;
 		actionIndex = player->actionIndex;
-		
 	}
 }
 

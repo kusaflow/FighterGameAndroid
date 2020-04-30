@@ -24,9 +24,13 @@ public:
 	class AMyChar* player;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
-	bool punching = false;
+	bool bPunching = false;
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
+	bool bActionPressed1 = false;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	int actionIndex = 0;
+
 	
 };
