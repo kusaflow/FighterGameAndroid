@@ -32,5 +32,16 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	int actionIndex = 0;
 
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
+	int CharNumberIndex = 1;
+
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
+	bool bKickOn = false;
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
+	bool bSpecial = false;
+
+
 	
 };

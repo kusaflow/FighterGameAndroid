@@ -19,6 +19,9 @@ void UkusaAnimInstance::update() {
 		bPunching = player->bPunchOn;
 		bActionPressed1 = player->bActionPressed1;
 		actionIndex = player->actionIndex;
+		CharNumberIndex = player->CharNumberIndex;
+		bKickOn = player->bKickOn;
+		bSpecial = player->bSpecial;
 	}
 }
 

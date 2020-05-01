@@ -17,9 +17,7 @@ class FIGHTER_API UkusaGameInstance : public UGameInstance
 public:
 	//player variables
 	UPROPERTY()
-	bool punching = false;
+	int CharNumberIndex = 1;
 
-	UPROPERTY()
-	bool actionPressed1 = false;
 	
 };

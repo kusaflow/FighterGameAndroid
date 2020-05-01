@@ -32,6 +32,8 @@ AMyChar::AMyChar()
 void AMyChar::BeginPlay()
 {
 	Super::BeginPlay();
+	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
+	CharNumberIndex = gameInstance->CharNumberIndex;
 	
 }
 
@@ -39,7 +41,7 @@ void AMyChar::BeginPlay()
 void AMyChar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
+	//gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
 	
 

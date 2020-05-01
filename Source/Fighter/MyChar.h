@@ -38,6 +38,8 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int actionIndex = 0;
 
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	int CharNumberIndex = 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")
 	class UkusaGameInstance* gameInstance;
