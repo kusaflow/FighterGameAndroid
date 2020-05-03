@@ -61,6 +61,7 @@ void AMyChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("first", IE_Pressed, this, &AMyChar::FirstAction);
 	PlayerInputComponent->BindAction("second", IE_Pressed, this, &AMyChar::SecondAction);
+	PlayerInputComponent->BindAction("testingAction", IE_Pressed, this, &AMyChar::TestAction);
 
 	PlayerInputComponent->BindAction("first", IE_Released, this, &AMyChar::ActionButtonUp);
 	PlayerInputComponent->BindAction("second", IE_Released, this, &AMyChar::ActionButtonUp);
@@ -130,4 +131,9 @@ int AMyChar::GiveMeAction() {
 		}
 	}
 	return 0;
+}
+
+
+void AMyChar::TestAction(){
+	actionIndex = 22;
 }

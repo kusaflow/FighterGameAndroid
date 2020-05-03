@@ -77,5 +77,7 @@ public:
 	UFUNCTION()
 	int GiveMeAction();
 
+	UFUNCTION()
+	void TestAction();
 
 };
