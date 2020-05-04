@@ -94,4 +94,8 @@ public:
 	UFUNCTION()
 	void MoveLeftRight(float val);
 
+	//PreJumpMOveBefore Action
+	UFUNCTION()
+	void PreActionMove();
+
 };

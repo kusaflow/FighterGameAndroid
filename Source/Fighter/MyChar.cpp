@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "kusaGameInstance.h"
 #include "Math/UnrealMathUtility.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 AMyChar::AMyChar()
@@ -53,7 +54,7 @@ void AMyChar::Tick(float DeltaTime)
 		GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
 	}
 	
-
+	PreActionMove();
 	actionIndex = 0;
 	
 
@@ -161,5 +162,14 @@ void AMyChar::MoveLeftRight(float val) {
 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 		AddMovementInput(Direction, val);
+	}
+}
+
+
+void AMyChar::PreActionMove() {
+	if (actionIndex == 9) {
+		GetCharacterMovement()->JumpZVelocity = 150;
+		Jump();
+		GetCharacterMovement()->Velocity.X = -200;
 	}
 }
