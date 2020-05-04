@@ -36,6 +36,12 @@ public:
 	bool bActionPressed1 = false;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	bool EnemyIsOnRight = true;
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	float RightLeftMoveVal = 0;
+
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int actionIndex = 0;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
@@ -79,5 +85,9 @@ public:
 
 	UFUNCTION()
 	void TestAction();
+
+	//move left right
+	UFUNCTION()
+	void MoveLeftRight(float val);
 
 };

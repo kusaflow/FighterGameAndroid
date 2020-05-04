@@ -60,10 +60,12 @@ void AMyChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("punch", this, &AMyChar::punchOn);
 	PlayerInputComponent->BindAxis("kick", this, &AMyChar::kickOn);
 	PlayerInputComponent->BindAxis("special", this, &AMyChar::specialOn);
+	PlayerInputComponent->BindAxis("RightLeftMovement", this, &AMyChar::MoveLeftRight);
 
 	PlayerInputComponent->BindAction("first", IE_Pressed, this, &AMyChar::FirstAction);
 	PlayerInputComponent->BindAction("second", IE_Pressed, this, &AMyChar::SecondAction);
 	PlayerInputComponent->BindAction("testingAction", IE_Pressed, this, &AMyChar::TestAction);
+
 
 	PlayerInputComponent->BindAction("first", IE_Released, this, &AMyChar::ActionButtonUp);
 	PlayerInputComponent->BindAction("second", IE_Released, this, &AMyChar::ActionButtonUp);
@@ -118,10 +120,10 @@ int AMyChar::GiveMeAction() {
 	}
 	else if (bKickOn) {
 		if (bActionPressed1) {
-			return (int)FMath::FRandRange(1, 12);
+			return (int)FMath::FRandRange(1, 11);
 		}
 		else {
-			return (int)FMath::FRandRange(1, 12);
+			return (int)FMath::FRandRange(1, 11);
 		}
 	}
 	else {
@@ -138,4 +140,16 @@ int AMyChar::GiveMeAction() {
 
 void AMyChar::TestAction(){
 	actionIndex = 22;
+}
+
+void AMyChar::MoveLeftRight(float val) {
+	if (Controller != nullptr) {
+		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
+
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
+
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		AddMovementInput(Direction, val);
+	}
 }
