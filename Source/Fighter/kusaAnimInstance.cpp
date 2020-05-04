@@ -22,8 +22,18 @@ void UkusaAnimInstance::update() {
 		CharNumberIndex = player->CharNumberIndex;
 		bKickOn = player->bKickOn;
 		bSpecial = player->bSpecial;
-		EnemyIsOnRight = player->EnemyIsOnRight;
+		EnemyIsOnRight = player->bEnemyIsOnRight;
 		RightLeftMoveVal = player->RightLeftMoveVal;
+		if (actionIndex != 0){
+			bActionInMOtion = false;
+		}
+
+		player->bActionInMOtion = bActionInMOtion;
 	}
+	
+	if (!EnemyIsOnRight) {
+		RightLeftMoveVal *= -1;
+	}
+	RightLeftMoveVal *= 100;
 }
 

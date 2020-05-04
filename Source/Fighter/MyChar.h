@@ -36,7 +36,7 @@ public:
 	bool bActionPressed1 = false;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
-	bool EnemyIsOnRight = true;
+	bool bEnemyIsOnRight = true;
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	float RightLeftMoveVal = 0;
@@ -49,6 +49,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")
 	class UkusaGameInstance* gameInstance;
+
+	//move flag : it is used so that when an action is pressed then movement will be stopped and start when anim is ended
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	bool bActionInMOtion = true;
 
 
 protected:

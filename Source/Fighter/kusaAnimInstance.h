@@ -42,12 +42,14 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	bool bSpecial = false;
 
-	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	bool EnemyIsOnRight = false;
 
-	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	float RightLeftMoveVal = 0;
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusaVar")
+	bool bActionInMOtion = true;
 
 	
 };

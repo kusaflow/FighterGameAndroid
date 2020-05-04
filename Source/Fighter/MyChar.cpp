@@ -45,6 +45,13 @@ void AMyChar::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
+	//turing character 
+	if (bEnemyIsOnRight) {
+		GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0,-90,0));
+	}
+	else {
+		GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
+	}
 	
 
 	actionIndex = 0;
@@ -143,6 +150,9 @@ void AMyChar::TestAction(){
 }
 
 void AMyChar::MoveLeftRight(float val) {
+	if (!bActionInMOtion)
+		return;
+	RightLeftMoveVal = val;
 	if (Controller != nullptr) {
 		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
 
