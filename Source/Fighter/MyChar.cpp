@@ -37,6 +37,10 @@ void AMyChar::BeginPlay()
 	Super::BeginPlay();
 	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 	CharNumberIndex = gameInstance->CharNumberIndex;
+
+	if (CharNumberIndex == 1) {
+		GetCharacterMovement()->MaxWalkSpeed = 145;
+	}
 	
 }
 
