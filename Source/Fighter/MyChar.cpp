@@ -107,13 +107,19 @@ void AMyChar::specialOn(float val) {
 
 
 void AMyChar::FirstAction() {
-	actionIndex = GiveMeAction();
+	if (!bActionInMOtion)
+		return;
 	bActionPressed1 = true;
+	actionIndex = GiveMeAction();
+	
 }
 
 void AMyChar::SecondAction() {
-	actionIndex = GiveMeAction();
+	if (!bActionInMOtion)
+		return;
 	bActionPressed1 = false;
+	actionIndex = GiveMeAction();
+	
 }
 
 void AMyChar::ActionButtonUp() {
@@ -171,9 +177,19 @@ void AMyChar::MoveLeftRight(float val) {
 
 
 void AMyChar::PreActionMove() {
-	if (actionIndex == 9) {
-		GetCharacterMovement()->JumpZVelocity = 150;
-		Jump();
-		GetCharacterMovement()->Velocity.X = -200;
+	int dirFactor = 1;
+	if (!bEnemyIsOnRight)
+		dirFactor = -1;
+	if (CharNumberIndex == 1) {
+		if (actionIndex == 9 && bKickOn && bActionPressed1) {
+			GetCharacterMovement()->JumpZVelocity = 150 * dirFactor;
+			Jump();
+			GetCharacterMovement()->Velocity.X = -200 * dirFactor;
+		}
+		else if (actionIndex == 2 && bKickOn && !bActionPressed1) {
+			GetCharacterMovement()->JumpZVelocity = 300 * dirFactor;
+			Jump();
+			GetCharacterMovement()->Velocity.X = -400 * dirFactor;
+		}
 	}
 }
