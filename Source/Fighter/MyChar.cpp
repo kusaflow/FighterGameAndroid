@@ -11,8 +11,7 @@
 // Sets default values
 AMyChar::AMyChar()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+ 	PrimaryActorTick.bCanEverTick = true;
 
 	//create camera bomm
 	//pull towards player when coloosion happens
