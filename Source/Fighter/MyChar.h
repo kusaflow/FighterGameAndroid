@@ -54,7 +54,18 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	bool bActionInMOtion = true;
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusaAction")
+	bool bAnimInMotion = false;
+	
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	int PrevAction = 0, InActionMotionIndex = 0;
 
+	//0 for nothing
+	//1 for punch
+	//2 for kick
+	//3 for special
+	short PrevActionType_P_K_S = 0;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -98,4 +109,11 @@ public:
 	UFUNCTION()
 	void PreActionMove();
 
+	UFUNCTION()
+	void InActionAnimaManager();
+
+	UFUNCTION()
+	void Testing(float val);
+	
+	
 };

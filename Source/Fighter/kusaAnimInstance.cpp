@@ -27,6 +27,11 @@ void UkusaAnimInstance::update() {
 		if (actionIndex != 0){
 			bActionInMOtion = false;
 		}
+		if (bInAnimMotion)
+		{
+			player->bAnimInMotion = true;
+			bInAnimMotion = false;
+		}
 
 		player->bActionInMOtion = bActionInMOtion;
 	}

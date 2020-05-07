@@ -34,8 +34,7 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	int CharNumberIndex = 1;
-
-
+	
 	UPROPERTY(BlueprintReadOnly, Category = "kusaVar")
 	bool bKickOn = false;
 
@@ -51,5 +50,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "kusaVar")
 	bool bActionInMOtion = true;
 
+	//perform action in between Animations
+	UPROPERTY(BlueprintReadWrite, Category="kusaVar")
+	bool bInAnimMotion = false;
 	
 };

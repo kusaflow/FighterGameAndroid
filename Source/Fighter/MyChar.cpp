@@ -59,7 +59,8 @@ void AMyChar::Tick(float DeltaTime)
 	
 	PreActionMove();
 	actionIndex = 0;
-	
+
+	InActionAnimaManager();
 
 }
 
@@ -72,6 +73,10 @@ void AMyChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("kick", this, &AMyChar::kickOn);
 	PlayerInputComponent->BindAxis("special", this, &AMyChar::specialOn);
 	PlayerInputComponent->BindAxis("RightLeftMovement", this, &AMyChar::MoveLeftRight);
+
+	//testing
+	PlayerInputComponent->BindAxis("Testing", this, &AMyChar::Testing);
+
 
 	PlayerInputComponent->BindAction("first", IE_Pressed, this, &AMyChar::FirstAction);
 	PlayerInputComponent->BindAction("second", IE_Pressed, this, &AMyChar::SecondAction);
@@ -110,7 +115,21 @@ void AMyChar::FirstAction() {
 		return;
 	bActionPressed1 = true;
 	actionIndex = GiveMeAction();
+
+	if(bPunchOn)
+	{
+		PrevActionType_P_K_S = 1;
+	}else if (bKickOn)
+	{
+		PrevActionType_P_K_S = 2;
+	}else
+	{
+		PrevActionType_P_K_S = 3;
+	}
 	
+	PrevAction = actionIndex;
+	InActionMotionIndex = 1;
+	bActionInMOtion = false;	
 }
 
 void AMyChar::SecondAction() {
@@ -118,7 +137,21 @@ void AMyChar::SecondAction() {
 		return;
 	bActionPressed1 = false;
 	actionIndex = GiveMeAction();
+
+	if(bPunchOn)
+	{
+		PrevActionType_P_K_S = 1;
+	}else if (bKickOn)
+	{
+		PrevActionType_P_K_S = 2;
+	}else
+	{
+		PrevActionType_P_K_S = 3;
+	}
 	
+	PrevAction = actionIndex;
+	InActionMotionIndex = 1;
+	bActionInMOtion = false;
 }
 
 void AMyChar::ActionButtonUp() {
@@ -140,6 +173,7 @@ int AMyChar::GiveMeAction() {
 			return (int)FMath::FRandRange(1, 11);
 		}
 		else {
+			return 5;
 			return (int)FMath::FRandRange(1, 11);
 		}
 	}
@@ -166,7 +200,8 @@ void AMyChar::MoveLeftRight(float val) {
 	if (Controller != nullptr) {
 		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
 
-		const FRotator Rotation = Controller->GetControlRotation();
+
+	const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
@@ -192,3 +227,62 @@ void AMyChar::PreActionMove() {
 		}
 	}
 }
+
+void AMyChar::InActionAnimaManager()
+{
+	int dirFactor = 1;
+	if (!bEnemyIsOnRight){
+		dirFactor = -1;
+		//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
+	}
+	
+	//Character 1
+	if (CharNumberIndex == 1){
+		//kick Actions
+		if (PrevActionType_P_K_S == 2){
+			//Action 2
+			if(!bActionPressed1){
+				if (PrevAction == 4)
+				{
+					//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
+					//Action for action 4 ,kicking, Action_2
+					if(InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 200;
+						Jump();
+						GetCharacterMovement()->Velocity.X = 400*dirFactor;
+						actionIndex++;
+						bAnimInMotion = false;
+					} 
+				}else if (PrevAction == 5)
+				{
+					//Action for action 5 ,kicking, Action_2	
+					if(InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 200;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -400*dirFactor;
+						actionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
+		
+		}
+	}
+	
+
+}
+
+void AMyChar::Testing(float val)
+{
+	if (val == 1)
+	{
+		bEnemyIsOnRight = true;
+	}else if (val == -1)
+	{
+		bEnemyIsOnRight = false;
+	}
+	
+}
+ 
