@@ -173,7 +173,7 @@ int AMyChar::GiveMeAction() {
 			return (int)FMath::FRandRange(1, 11);
 		}
 		else {
-			return 6;
+			return 8;
 			return (int)FMath::FRandRange(1, 11);
 		}
 	}
@@ -286,6 +286,17 @@ void AMyChar::InActionAnimaManager()
 					}else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
 					{
 						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}//---------------------------------------------------------------------------------------------------------
+				else if (PrevAction == 7)
+				{
+					//Action for action 5 ,kicking, Action_2	
+					if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 200;
+						Jump();
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
