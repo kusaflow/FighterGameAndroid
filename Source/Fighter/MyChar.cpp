@@ -111,7 +111,7 @@ void AMyChar::specialOn(float val) {
 
 
 void AMyChar::FirstAction() {
-	if (!bActionInMOtion)
+	if (!bAnim_ActionInMOtion)
 		return;
 	bActionPressed1 = true;
 	actionIndex = GiveMeAction();
@@ -128,12 +128,12 @@ void AMyChar::FirstAction() {
 	}
 	
 	PrevAction = actionIndex;
-	InActionMotionIndex = 1;
-	bActionInMOtion = false;	
+	Anim_InActionMotionIndex = 1;
+	bAnim_ActionInMOtion = false;	
 }
 
 void AMyChar::SecondAction() {
-	if (!bActionInMOtion)
+	if (!bAnim_ActionInMOtion)
 		return;
 	bActionPressed1 = false;
 	actionIndex = GiveMeAction();
@@ -150,8 +150,8 @@ void AMyChar::SecondAction() {
 	}
 	
 	PrevAction = actionIndex;
-	InActionMotionIndex = 1;
-	bActionInMOtion = false;
+	Anim_InActionMotionIndex = 1;
+	bAnim_ActionInMOtion = false;
 }
 
 void AMyChar::ActionButtonUp() {
@@ -173,11 +173,11 @@ int AMyChar::GiveMeAction() {
 			return (int)FMath::FRandRange(1, 11);
 		}
 		else {
-			return 5;
+			return 6;
 			return (int)FMath::FRandRange(1, 11);
 		}
 	}
-	else {
+	else if (bSpecial){
 		if (bActionPressed1) {
 			return (int)FMath::FRandRange(1,4);
 		}
@@ -194,7 +194,7 @@ void AMyChar::TestAction(){
 }
 
 void AMyChar::MoveLeftRight(float val) {
-	if (!bActionInMOtion)
+	if (!bAnim_ActionInMOtion)
 		return;
 	RightLeftMoveVal = val;
 	if (Controller != nullptr) {
@@ -246,23 +246,47 @@ void AMyChar::InActionAnimaManager()
 				{
 					//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
 					//Action for action 4 ,kicking, Action_2
-					if(InActionMotionIndex == 1 && bAnimInMotion)
+					if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
 					{
 						GetCharacterMovement()->JumpZVelocity = 200;
 						Jump();
 						GetCharacterMovement()->Velocity.X = 400*dirFactor;
-						actionIndex++;
+						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					} 
-				}else if (PrevAction == 5)
+				}
+				//---------------------------------------------------------------------------------------------------------
+				else if (PrevAction == 5)
 				{
 					//Action for action 5 ,kicking, Action_2	
-					if(InActionMotionIndex == 1 && bAnimInMotion)
+					if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
 					{
 						GetCharacterMovement()->JumpZVelocity = 200;
 						Jump();
 						GetCharacterMovement()->Velocity.X = -400*dirFactor;
-						actionIndex++;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+				//-------------------------------------------------------------------------------------------------------------------
+				else if (PrevAction == 6)
+				{
+					//Action for action 6 ,kicking, Action_2	
+					if (Anim_InActionMotionIndex == 1)
+					{
+						GetCharacterMovement()->Velocity.X = -800*dirFactor;
+						if(bAnimInMotion)
+						{
+							GetCharacterMovement()->JumpZVelocity = 300;
+							Jump();
+							GetCharacterMovement()->Velocity.X = -400*dirFactor;
+							Anim_InActionMotionIndex++;
+							bAnimInMotion = false;
+						}
+					}else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
 				}

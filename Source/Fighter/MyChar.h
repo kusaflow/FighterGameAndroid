@@ -52,13 +52,13 @@ public:
 
 	//move flag : it is used so that when an action is pressed then movement will be stopped and start when anim is ended
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
-	bool bActionInMOtion = true;
+	bool bAnim_ActionInMOtion = true;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaAction")
 	bool bAnimInMotion = false;
 	
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
-	int PrevAction = 0, InActionMotionIndex = 0;
+	int PrevAction = 0, Anim_InActionMotionIndex = 0;
 
 	//0 for nothing
 	//1 for punch

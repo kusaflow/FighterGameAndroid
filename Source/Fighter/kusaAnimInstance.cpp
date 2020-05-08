@@ -33,7 +33,7 @@ void UkusaAnimInstance::update() {
 			bInAnimMotion = false;
 		}
 
-		player->bActionInMOtion = bActionInMOtion;
+		player->bAnim_ActionInMOtion = bActionInMOtion;
 	}
 	
 	if (!EnemyIsOnRight) {
