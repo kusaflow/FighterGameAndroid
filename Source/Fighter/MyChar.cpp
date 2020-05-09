@@ -7,6 +7,7 @@
 #include "kusaGameInstance.h"
 #include "Math/UnrealMathUtility.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Math/UnrealMathSSE.h"
 
 // Sets default values
 AMyChar::AMyChar()
@@ -177,7 +178,7 @@ int AMyChar::GiveMeAction() {
 		}
 	}
 	else if (bSpecial){	
-		return 2;
+		return TempRet;
 		return (int)FMath::FRandRange(1,4);
 		
 		
@@ -313,6 +314,66 @@ void AMyChar::InActionAnimaManager()
                 }
 			}
 		
+		}
+		else if (PrevActionType_P_K_S == 3)
+		{
+			//------------------------------------------------------------------------------------------------------------
+			if (PrevAction == 1)
+			{
+				//Action for action 1 ,Special
+				if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				{
+					GetCharacterMovement()->JumpZVelocity = 300;
+					Jump();
+					GetCharacterMovement()->Velocity.X = -400*dirFactor;
+					Anim_InActionMotionIndex++;
+					bAnimInMotion = false;
+				} 
+			}
+			//----------------------------------------------------------------------------------------------------------------
+			else if (PrevAction == 2)
+			{
+				//Action for action 2 ,Special
+				if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				{
+					Anim_InActionMotionIndex++;
+					bAnimInMotion = false;
+				}
+				else if (Anim_InActionMotionIndex == 2)
+				{
+					GetCharacterMovement()->Velocity.X = -400*dirFactor;
+					if (bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 300;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -400*dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			} 
+			//------------------------------------------------------------------------------------------------------------
+			else if (PrevAction == 4)
+			{
+				//Action for action 4 ,Special
+				if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				{
+					GetCharacterMovement()->Velocity.X = -300*dirFactor;
+					if (bAnimInMotion)
+					{
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}else if (Anim_InActionMotionIndex == 2)
+				{
+					GetCharacterMovement()->Velocity.X = 300*dirFactor;
+					if (bAnimInMotion)
+					{
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
 		}
 	}
 	

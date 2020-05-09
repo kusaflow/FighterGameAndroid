@@ -60,6 +60,10 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int PrevAction = 0, Anim_InActionMotionIndex = 0;
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusaAction")
+	int TempRet = 0;
+
+
 	//0 for nothing
 	//1 for punch
 	//2 for kick
