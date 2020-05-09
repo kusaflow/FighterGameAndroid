@@ -173,17 +173,14 @@ int AMyChar::GiveMeAction() {
 			return (int)FMath::FRandRange(1, 11);
 		}
 		else {
-			return 10;
 			return (int)FMath::FRandRange(1, 11);
 		}
 	}
-	else if (bSpecial){
-		if (bActionPressed1) {
-			return (int)FMath::FRandRange(1,4);
-		}
-		else {
-			return (int)FMath::FRandRange(1,4);
-		}
+	else if (bSpecial){	
+		return 2;
+		return (int)FMath::FRandRange(1,4);
+		
+		
 	}
 	return 0;
 }
