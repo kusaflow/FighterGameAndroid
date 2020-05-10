@@ -356,23 +356,33 @@ void AMyChar::InActionAnimaManager()
 			else if (PrevAction == 4)
 			{
 				//Action for action 4 ,Special
-				if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				if(Anim_InActionMotionIndex == 1)
 				{
 					GetCharacterMovement()->Velocity.X = -300*dirFactor;
 					if (bAnimInMotion)
 					{
+						GetCharacterMovement()->Velocity.X = 0;
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
 				}else if (Anim_InActionMotionIndex == 2)
 				{
-					GetCharacterMovement()->Velocity.X = 300*dirFactor;
 					if (bAnimInMotion)
 					{
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
+				}else if (Anim_InActionMotionIndex == 3)
+				{
+					GetCharacterMovement()->Velocity.X = 300*dirFactor;
+					if (bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
 				}
+				
 			}
 		}
 	}
