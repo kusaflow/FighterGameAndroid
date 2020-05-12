@@ -1,14 +1,14 @@
 MYKRATOR=======================================
 	LimbHit
-		LK_1_3_
-		LK_1_4_
-		LK_1_9_
-		HP_1_3_
-		HP_1_4_
-		HP_1_6_
-		HK_1_1_
-		HK_1_3_
-		HK_1_4_____1_5
+		LK_1_3_ - Lite
+		LK_1_4_ - heavy
+		LK_1_9_ - lite
+		HP_1_3_ - lite
+		HP_1_4_ - heavy
+		HP_1_6_ - heavy
+		HK_1_1_ - heavy
+		HK_1_3_ - heavy
+		HK_1_4_____1_5 - lite
 	special
 		HK_1_8___
 	

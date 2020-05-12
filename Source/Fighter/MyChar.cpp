@@ -14,6 +14,7 @@ AMyChar::AMyChar()
 {
  	PrimaryActorTick.bCanEverTick = true;
 
+	CharNumberIndex = 2;
 	//create camera bomm
 	//pull towards player when coloosion happens
 	cameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -161,27 +162,31 @@ void AMyChar::ActionButtonUp() {
 
 
 int AMyChar::GiveMeAction() {
-	if (bPunchOn) {
-		if (bActionPressed1) {
-			return (int)FMath::FRandRange(1,7);
+	if(CharNumberIndex == 1)
+	{
+		if (bPunchOn) {
+			if (bActionPressed1) {
+				return (int)FMath::FRandRange(1,7);
+			}
+			else {
+				return (int)FMath::FRandRange(1,7);
+			}
 		}
-		else {
-			return (int)FMath::FRandRange(1,7);
+		else if (bKickOn) {
+			if (bActionPressed1) {
+				return (int)FMath::FRandRange(1, 11);
+			}
+			else {
+				return (int)FMath::FRandRange(1, 11);
+			}
 		}
-	}
-	else if (bKickOn) {
-		if (bActionPressed1) {
-			return (int)FMath::FRandRange(1, 11);
+		else if (bSpecial){	
+			return (int)FMath::FRandRange(1,4);
+		
 		}
-		else {
-			return (int)FMath::FRandRange(1, 11);
-		}
-	}
-	else if (bSpecial){	
+	}else if (CharNumberIndex == 2)
+	{
 		return TempRet;
-		return (int)FMath::FRandRange(1,4);
-		
-		
 	}
 	return 0;
 }
