@@ -391,7 +391,27 @@ void AMyChar::InActionAnimaManager()
 			}
 		}
 	}
-	
+
+	else if (CharNumberIndex == 2)
+	{
+		if (PrevActionType_P_K_S == 1)
+		{
+			if (bActionPressed1)
+			{
+				if (PrevAction == 5)
+				{
+					//Action for action 5 ,Limb, Action_1	
+					if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 900;
+						Jump();
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
+		}
+	}	
 
 }
 
