@@ -29,6 +29,9 @@ AMyChar::AMyChar()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
 
+	//gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
+	//CharNumberIndex = gameInstance->CharNumberIndex;
+
 
 }
 
@@ -43,6 +46,7 @@ void AMyChar::BeginPlay()
 		GetCharacterMovement()->MaxWalkSpeed = 145;
 	}
 	
+	//SetCharNumber();
 }
 
 // Called every frame
@@ -241,6 +245,8 @@ void AMyChar::InActionAnimaManager()
 	
 	//Character 1
 	if (CharNumberIndex == 1){
+		//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
+
 		//kick Actions
 		if (PrevActionType_P_K_S == 2){
 			//Action 2

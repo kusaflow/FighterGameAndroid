@@ -118,6 +118,10 @@ public:
 
 	UFUNCTION()
 	void Testing(float val);
-	
+
+	//UFUNCTION(BlueprintCallable, Category = "kusaFun")
+	//void SetCharNumber();
+
+
 	
 };
