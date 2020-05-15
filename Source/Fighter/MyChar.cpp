@@ -55,6 +55,8 @@ void AMyChar::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
+	GetRootComponent()->SetRelativeRotation(FRotator(0, -180, 0));
+	
 	//turing character 
 	if (bEnemyIsOnRight) {
 		GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0,-90,0));
@@ -420,7 +422,7 @@ void AMyChar::InActionAnimaManager()
 					//Action for action 5 ,Limb, Action_1	
 					if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
 					{
-						GetCharacterMovement()->JumpZVelocity = 900;
+						GetCharacterMovement()->JumpZVelocity = 100;
 						Jump();
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
