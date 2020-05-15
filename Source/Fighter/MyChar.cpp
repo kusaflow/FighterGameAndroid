@@ -14,7 +14,7 @@ AMyChar::AMyChar()
 {
  	PrimaryActorTick.bCanEverTick = true;
 
-	CharNumberIndex = 2;
+	//CharNumberIndex = 2;
 	//create camera bomm
 	//pull towards player when coloosion happens
 	cameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -128,9 +128,12 @@ void AMyChar::FirstAction() {
 	}else if (bKickOn)
 	{
 		PrevActionType_P_K_S = 2;
-	}else
+	}else if (bSpecial)
 	{
 		PrevActionType_P_K_S = 3;
+	}
+	else {
+		return;
 	}
 	
 	PrevAction = actionIndex;
@@ -142,19 +145,22 @@ void AMyChar::SecondAction() {
 	if (!bAnim_ActionInMOtion)
 		return;
 	bActionPressed1 = false;
-	actionIndex = GiveMeAction();
-
+	
 	if(bPunchOn)
 	{
 		PrevActionType_P_K_S = 1;
 	}else if (bKickOn)
 	{
 		PrevActionType_P_K_S = 2;
-	}else
+	}else if (bSpecial)
 	{
 		PrevActionType_P_K_S = 3;
 	}
-	
+	else {
+		return;
+	}
+	actionIndex = GiveMeAction();
+
 	PrevAction = actionIndex;
 	Anim_InActionMotionIndex = 1;
 	bAnim_ActionInMOtion = false;
@@ -170,21 +176,26 @@ int AMyChar::GiveMeAction() {
 	{
 		if (bPunchOn) {
 			if (bActionPressed1) {
+				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 			else {
+				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 		}
 		else if (bKickOn) {
 			if (bActionPressed1) {
+				return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 			else {
+				return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 		}
 		else if (bSpecial){	
+			return TempRet;
 			return (int)FMath::FRandRange(1,4);
 		
 		}
