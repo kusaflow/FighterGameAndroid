@@ -410,7 +410,7 @@ void AMyChar::InActionAnimaManager()
 			}
 		}
 	}
-
+	//=====================================================================2====================================================
 	else if (CharNumberIndex == 2)
 	{
 		if (PrevActionType_P_K_S == 1)
@@ -484,6 +484,59 @@ void AMyChar::InActionAnimaManager()
 							Anim_InActionMotionIndex++;
 							bAnimInMotion = false;
 						}
+					}
+				}
+			}
+		}
+		else if (PrevActionType_P_K_S == 3) {
+
+			if (PrevAction == 1)
+			{
+				//Action for action 1 ,Limb, !Action_1	
+				if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				{
+					Anim_InActionMotionIndex++;
+					bAnimInMotion = false;
+				}
+				else if (Anim_InActionMotionIndex == 2) {
+					GetCharacterMovement()->Velocity.X = -100 * dirFactor;
+
+					if (bAnimInMotion) {
+						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
+			else if (PrevAction == 2)
+			{
+				//Action for action 2 ,Limb, !Action_1	
+				if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				{
+					Anim_InActionMotionIndex++;
+					bAnimInMotion = false;
+				}
+				else if (Anim_InActionMotionIndex == 2) {
+					GetCharacterMovement()->Velocity.X = -150 * dirFactor;
+
+					if (bAnimInMotion) {
+						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+				else if (Anim_InActionMotionIndex == 3 && bAnimInMotion)
+				{
+					Anim_InActionMotionIndex++;
+					bAnimInMotion = false;
+				}
+				else if (Anim_InActionMotionIndex == 4) {
+					GetCharacterMovement()->Velocity.X = -150 * dirFactor;
+
+					if (bAnimInMotion) {
+						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
 					}
 				}
 			}
