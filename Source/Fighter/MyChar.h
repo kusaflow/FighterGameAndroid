@@ -114,7 +114,7 @@ public:
 	void PreActionMove();
 
 	UFUNCTION()
-	void InActionAnimaManager();
+	void InActionAnimaManager(float dt);
 
 	UFUNCTION()
 	void Testing(float val);

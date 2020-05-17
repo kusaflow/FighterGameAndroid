@@ -68,7 +68,7 @@ void AMyChar::Tick(float DeltaTime)
 	PreActionMove();
 	actionIndex = 0;
 
-	InActionAnimaManager();
+	InActionAnimaManager(DeltaTime);
 
 }
 
@@ -248,7 +248,7 @@ void AMyChar::PreActionMove() {
 	}
 }
 
-void AMyChar::InActionAnimaManager()
+void AMyChar::InActionAnimaManager(float dt)
 {
 	int dirFactor = 1;
 	if (!bEnemyIsOnRight){
@@ -540,6 +540,47 @@ void AMyChar::InActionAnimaManager()
 					}
 				}
 			}
+			else if (PrevAction == 4)
+			{
+				//Action for action 1 ,Limb, !Action_1	
+				
+				if (Anim_InActionMotionIndex == 1) {
+					GetCharacterMovement()->Velocity.X = -300 * dirFactor;
+
+					if (bAnimInMotion) {
+
+						GetCharacterMovement()->JumpZVelocity = 500;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -300 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+				else if (Anim_InActionMotionIndex == 2 && bAnimInMotion) {
+					GetCharacterMovement()->Velocity.X = 0;
+					Anim_InActionMotionIndex++;
+					bAnimInMotion = false;
+				}
+			}
+			else if (PrevAction == 5)
+			{
+				//Action for action 1 ,Limb, !Action_1	
+
+				if (Anim_InActionMotionIndex == 1) {
+					GetCharacterMovement()->Velocity.X = -200 * dirFactor ;
+
+					if (bAnimInMotion) {
+
+						GetCharacterMovement()->Velocity.X = 0;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+				
+			}
+
+
+
 		}
 	}	
 
