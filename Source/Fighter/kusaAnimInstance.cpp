@@ -24,6 +24,8 @@ void UkusaAnimInstance::update() {
 		bSpecial = player->bSpecial;
 		EnemyIsOnRight = player->bEnemyIsOnRight;
 		RightLeftMoveVal = player->RightLeftMoveVal;
+		//isdead Check
+		bisDead = player->bisDead;
 		if (actionIndex != 0){
 			bActionInMOtion = false;
 		}

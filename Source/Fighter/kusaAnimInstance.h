@@ -53,5 +53,9 @@ public:
 	//perform action in between Animations
 	UPROPERTY(BlueprintReadWrite, Category="kusaVar")
 	bool bInAnimMotion = false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "HkusaVar")
+	bool bisDead= false;
+
 	
 };

@@ -45,6 +45,10 @@ void AMyChar::BeginPlay()
 	if (CharNumberIndex == 1) {
 		GetCharacterMovement()->MaxWalkSpeed = 145;
 	}
+
+	//setting health
+	Health = 500;
+	bisDead = false;
 	
 	//SetCharNumber();
 }
@@ -55,7 +59,7 @@ void AMyChar::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
-	GetRootComponent()->SetRelativeRotation(FRotator(0, -180, 0));
+	//GetRootComponent()->SetRelativeRotation(FRotator(0, -180, 0));
 	
 	//turing character 
 	if (bEnemyIsOnRight) {
@@ -69,6 +73,12 @@ void AMyChar::Tick(float DeltaTime)
 	actionIndex = 0;
 
 	InActionAnimaManager(DeltaTime);
+
+	//damage check
+	if (Health <= 0) {
+		bisDead = true;
+	}
+
 
 }
 
@@ -178,31 +188,53 @@ int AMyChar::GiveMeAction() {
 	{
 		if (bPunchOn) {
 			if (bActionPressed1) {
-				return TempRet;
+				//return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 			else {
-				return TempRet;
+				//return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 		}
 		else if (bKickOn) {
 			if (bActionPressed1) {
-				return TempRet;
+				//return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 			else {
-				return TempRet;
+				//return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 		}
 		else if (bSpecial){	
-			return TempRet;
+			//return TempRet;
 			return (int)FMath::FRandRange(1,4);
 		
 		}
-	}else if (CharNumberIndex == 2)
+	}
+	//=====================================================================================================
+	else if (CharNumberIndex == 2)
 	{
+		if (bPunchOn) {
+			if (bActionPressed1) {
+				return (int)FMath::FRandRange(1, 6);
+			}
+			else {
+				return (int)FMath::FRandRange(1, 6);
+			}
+		}
+		else if (bKickOn) {
+			if (bActionPressed1) {
+				return (int)FMath::FRandRange(1, 6);
+			}
+			else {
+				return (int)FMath::FRandRange(1, 6);
+			}
+		}
+		else if (bSpecial) {
+			return (int)FMath::FRandRange(1, 6);
+
+		}
 		return TempRet;
 	}
 	return 0;

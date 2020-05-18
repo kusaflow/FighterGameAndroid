@@ -64,6 +64,15 @@ public:
 	int TempRet = 0;
 
 
+	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
+	float Health= 100;
+
+	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
+	bool bisDead = false;
+
+
+
+
 	//0 for nothing
 	//1 for punch
 	//2 for kick
