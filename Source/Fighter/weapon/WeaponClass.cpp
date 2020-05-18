@@ -3,7 +3,8 @@
 
 #include "WeaponClass.h"
 #include "Components/StaticMeshComponent.h"
-#include "Components/CapsuleComponent.h"
+#include "Components/BoxComponent.h"
+#include "../MyChar.h"
 
 // Sets default values
 AWeaponClass::AWeaponClass()
@@ -14,8 +15,11 @@ AWeaponClass::AWeaponClass()
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Weapon"));
 	RootComponent = mesh;
 
-	hitArea = CreateDefaultSubobject<UCapsuleComponent>(TEXT("hitArea"));
+	hitArea = CreateDefaultSubobject<UBoxComponent>(TEXT("hitArea"));
 	hitArea->SetupAttachment(GetRootComponent());
+
+	hitArea->OnComponentBeginOverlap.AddDynamic(this, &AWeaponClass ::BeginOverlap);
+
 
 }
 
@@ -30,6 +34,17 @@ void AWeaponClass::BeginPlay()
 void AWeaponClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) 
+{
+	AMyChar* attackedChar = Cast<AMyChar>(OtherActor);
+
+	if (attackedChar) {
+		attackedChar->Health -= 100;
+	}
 
 }
 

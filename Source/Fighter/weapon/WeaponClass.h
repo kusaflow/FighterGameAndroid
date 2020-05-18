@@ -19,7 +19,7 @@ public:
 	class UStaticMeshComponent* mesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "kusaActions")
-	class UCapsuleComponent* hitArea;
+	class UBoxComponent* hitArea;
 
 protected:
 	// Called when the game starts or when spawned
@@ -29,4 +29,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Overlap
+	UFUNCTION()
+	void BeginOverlap(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComp,
+			int32 OtherBodyIndex,bool bFromSweep, const FHitResult& SweepResult);
 };
