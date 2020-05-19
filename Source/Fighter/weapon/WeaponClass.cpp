@@ -41,9 +41,12 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) 
 {
 	AMyChar* attackedChar = Cast<AMyChar>(OtherActor);
+	AMyChar* parent = Cast<AMyChar>(GetAttachParentActor());
 
-	if (attackedChar) {
-		attackedChar->Health -= 100;
+	if (attackedChar && parent) {
+		if (attackedChar->bisEnemy != parent->bisEnemy) {
+			attackedChar->Health -= 100;
+		}
 	}
 
 }

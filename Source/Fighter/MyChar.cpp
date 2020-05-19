@@ -49,6 +49,8 @@ void AMyChar::BeginPlay()
 	//setting health
 	Health = 500;
 	bisDead = false;
+
+	bisEnemy = false;
 	
 	//SetCharNumber();
 }

@@ -70,6 +70,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
 	bool bisDead = false;
 
+	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
+	bool bisEnemy = false;
+
+
 
 
 
