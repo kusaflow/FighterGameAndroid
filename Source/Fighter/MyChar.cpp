@@ -44,6 +44,8 @@ void AMyChar::BeginPlay()
 
 	if (CharNumberIndex == 1) {
 		GetCharacterMovement()->MaxWalkSpeed = 145;
+	}else if (CharNumberIndex == 2) {
+		GetCharacterMovement()->MaxWalkSpeed = 145;
 	}
 
 	//setting health
@@ -255,7 +257,7 @@ void AMyChar::MoveLeftRight(float val) {
 		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
 
 
-	const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);

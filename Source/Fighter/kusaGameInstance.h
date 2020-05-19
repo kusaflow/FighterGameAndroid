@@ -19,5 +19,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	int CharNumberIndex = 2;
 
+	UPROPERTY(BlueprintReadWrite)
+	int EnemyNumberIndex = 2;
+
 	
 };
