@@ -8,6 +8,10 @@
 #include "Math/UnrealMathUtility.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Math/UnrealMathSSE.h"
+#include "weapon/WeaponClass.h"
+#include "Engine/World.h"
+#include "Engine/EngineTypes.h"
+
 
 // Sets default values
 AMyChar::AMyChar()
@@ -53,9 +57,11 @@ void AMyChar::BeginPlay()
 	bisDead = false;
 
 	bisEnemy = false;
+
 	
 	//SetCharNumber();
 }
+
 
 // Called every frame
 void AMyChar::Tick(float DeltaTime)
@@ -82,6 +88,13 @@ void AMyChar::Tick(float DeltaTime)
 	if (Health <= 0) {
 		bisDead = true;
 	}
+
+	if (bCanDoDamage) {
+		if (bAnim_ActionInMOtion) {
+			bCanDoDamage = false;
+		}
+	}
+
 
 
 }
@@ -129,6 +142,22 @@ void AMyChar::specialOn(float val) {
 		bSpecial = true;
 	else
 		bSpecial = false;
+}
+
+void AMyChar::MoveLeftRight(float val) {
+	if (!bAnim_ActionInMOtion)
+		return;
+	RightLeftMoveVal = val;
+	if (Controller != nullptr) {
+		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
+
+
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
+
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		AddMovementInput(Direction, val);
+	}
 }
 
 
@@ -188,6 +217,10 @@ void AMyChar::ActionButtonUp() {
 
 
 int AMyChar::GiveMeAction() {
+
+	//to start damage the player
+	bCanDoDamage = true;
+
 	if(CharNumberIndex == 1)
 	{
 		if (bPunchOn) {
@@ -247,22 +280,6 @@ int AMyChar::GiveMeAction() {
 
 void AMyChar::TestAction(){
 	actionIndex = 22;
-}
-
-void AMyChar::MoveLeftRight(float val) {
-	if (!bAnim_ActionInMOtion)
-		return;
-	RightLeftMoveVal = val;
-	if (Controller != nullptr) {
-		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
-
-
-		const FRotator Rotation = Controller->GetControlRotation();
-		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
-
-		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-		AddMovementInput(Direction, val);
-	}
 }
 
 
@@ -633,4 +650,6 @@ void AMyChar::Testing(float val)
 	}
 	
 }
+
+
  

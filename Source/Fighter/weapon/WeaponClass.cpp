@@ -42,10 +42,11 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 {
 	AMyChar* attackedChar = Cast<AMyChar>(OtherActor);
 	AMyChar* parent = Cast<AMyChar>(GetAttachParentActor());
-
-	if (attackedChar && parent) {
-		if (attackedChar->bisEnemy != parent->bisEnemy) {
-			attackedChar->Health -= 100;
+	if (parent->bCanDoDamage == true) {
+		if (attackedChar && parent) {
+			if (attackedChar->bisEnemy != parent->bisEnemy) {
+				attackedChar->Health -= 100;
+			}
 		}
 	}
 

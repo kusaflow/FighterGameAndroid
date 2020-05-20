@@ -56,6 +56,11 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaAction")
 	bool bAnimInMotion = false;
+
+	//can do damage
+	UPROPERTY(BlueprintReadWrite, Category = "kusaAction")
+	bool bCanDoDamage = false;
+
 	
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int PrevAction = 0, Anim_InActionMotionIndex = 0;
@@ -72,7 +77,6 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
 	bool bisEnemy = false;
-
 
 
 
@@ -132,6 +136,8 @@ public:
 	UFUNCTION()
 	void Testing(float val);
 
+
+	
 	//UFUNCTION(BlueprintCallable, Category = "kusaFun")
 	//void SetCharNumber();
 
