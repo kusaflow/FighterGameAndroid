@@ -22,5 +22,15 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	int EnemyNumberIndex = 1;
 
+	UPROPERTY(BlueprintReadWrite)
+	float EHealth = 0;
+
+	UPROPERTY(BlueprintReadWrite)
+	float PHealth = 0;
+
+	UPROPERTY(BlueprintReadWrite)
+	float MaxHealth = 500;
+
+
 	
 };

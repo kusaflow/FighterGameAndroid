@@ -13,5 +13,18 @@ UCLASS()
 class FIGHTER_API AEnemyAI : public AMyChar
 {
 	GENERATED_BODY()
+
+	AEnemyAI();
+
+public:
+	
+	
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "kusaF")
+	void myBeginPlay();
+
+	UFUNCTION(BlueprintCallable, Category = "kusaF")
+	void myTick(float dt);
 	
 };

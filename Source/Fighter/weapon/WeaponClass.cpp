@@ -45,7 +45,7 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	if (parent->bCanDoDamage == true) {
 		if (attackedChar && parent) {
 			if (attackedChar->bisEnemy != parent->bisEnemy) {
-				attackedChar->Health -= 100;
+				attackedChar->Health -= 10;
 			}
 		}
 	}

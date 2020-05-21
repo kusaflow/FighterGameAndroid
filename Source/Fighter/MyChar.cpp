@@ -67,7 +67,7 @@ void AMyChar::BeginPlay()
 void AMyChar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	//gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
+	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 
 	//GetRootComponent()->SetRelativeRotation(FRotator(0, -180, 0));
 	
@@ -94,6 +94,10 @@ void AMyChar::Tick(float DeltaTime)
 			bCanDoDamage = false;
 		}
 	}
+	//health
+
+	if (!bisEnemy)
+		gameInstance->PHealth = Health;
 
 
 
