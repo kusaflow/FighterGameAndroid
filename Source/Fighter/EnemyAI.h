@@ -19,7 +19,11 @@ class FIGHTER_API AEnemyAI : public AMyChar
 public:
 	UPROPERTY(EditAnywhere, category = "meshes")
 	TSubclassOf<class AWeaponClass> axe;
-	
+
+
+	UPROPERTY(EditAnywhere, category = "meshes")
+	int L1_AI_indexOfAction;
+
 	
 public:
 
@@ -30,6 +34,6 @@ public:
 	void myTick(float dt);
 
 	UFUNCTION()
-	void Level_1_AI();
+	void Level_1_AI(float dt);
 	
 };

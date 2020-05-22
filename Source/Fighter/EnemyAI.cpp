@@ -23,11 +23,11 @@ void AEnemyAI::myTick(float dt) {
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
 
-	Level_1_AI();
+	Level_1_AI(dt);
 	
 }
 
-void AEnemyAI::Level_1_AI() {
+void AEnemyAI::Level_1_AI(float dt) {
 	/*
 	the basic logic of this is it goes to sleep 
 	wakews up assign a move then go to sleep then wake up
@@ -43,8 +43,11 @@ void AEnemyAI::Level_1_AI() {
 	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
 	if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams))
 	{
-		if (OutHit.Actor.Get()->GetActorLocation().X - Start.X >= 200) {
+		if (OutHit.Actor.Get()->GetActorLocation().X - Start.X >= 250) {
 			MoveLeftRight(1);
+		}
+		else if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 160) {
+			MoveLeftRight(-1);
 		}
 		else {
 			MoveLeftRight(0);
