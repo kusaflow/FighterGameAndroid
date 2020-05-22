@@ -151,7 +151,29 @@ void AMyChar::specialOn(float val) {
 void AMyChar::MoveLeftRight(float val) {
 	if (!bAnim_ActionInMOtion)
 		return;
-	RightLeftMoveVal = val;
+
+	//interopolation
+	if (val == -1) {
+		if(RightLeftMoveVal >= -1){
+			RightLeftMoveVal -= GetWorld()->GetDeltaSeconds() * 3;
+		}
+	}
+	else if (val == 1) {
+		if (RightLeftMoveVal <= 1) {
+			RightLeftMoveVal += GetWorld()->GetDeltaSeconds() * 3;
+		}
+	}
+	else if (val == 0) {
+		if (RightLeftMoveVal > 0) {
+			RightLeftMoveVal -= GetWorld()->GetDeltaSeconds() * 3;
+		}
+		else {
+			RightLeftMoveVal += GetWorld()->GetDeltaSeconds() * 3;
+		}
+	}
+
+	
+	
 	if (Controller != nullptr) {
 		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
 
@@ -160,7 +182,7 @@ void AMyChar::MoveLeftRight(float val) {
 		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-		AddMovementInput(Direction, val);
+		AddMovementInput(Direction, RightLeftMoveVal);
 	}
 }
 

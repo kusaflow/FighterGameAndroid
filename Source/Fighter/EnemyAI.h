@@ -17,6 +17,8 @@ class FIGHTER_API AEnemyAI : public AMyChar
 	AEnemyAI();
 
 public:
+	UPROPERTY(EditAnywhere, category = "meshes")
+	TSubclassOf<class AWeaponClass> axe;
 	
 	
 public:
@@ -26,5 +28,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "kusaF")
 	void myTick(float dt);
+
+	UFUNCTION()
+	void Level_1_AI();
 	
 };
