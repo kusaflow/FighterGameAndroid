@@ -36,11 +36,27 @@ void UkusaAnimInstance::update() {
 		}
 
 		player->bAnim_ActionInMOtion = bActionInMOtion;
+
+		//reaction
+		ReactionIndex = player->ReactionIndex;
+
+		if (ReactionIndex != 0) {
+			bGotHit = true;
+			bReaction_CanSetValueToMainPlayer = true;
+			player->ReactionIndex = 0;
+		}
+
+		if (bReaction_CanSetValueToMainPlayer && !bGotHit) {
+			player->bGotHit = false;
+			bReaction_CanSetValueToMainPlayer = false;
+		}
+		
 	}
 	
 	if (!EnemyIsOnRight) {
 		RightLeftMoveVal *= -1;
 	}
 	RightLeftMoveVal *= 100;
+
 }
 

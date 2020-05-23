@@ -19,11 +19,12 @@ void AEnemyAI::myBeginPlay() {
 
 void AEnemyAI::myTick(float dt) {
 
+	
 	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
 
-	Level_1_AI(dt);
+	//Level_1_AI(dt);
 	
 }
 

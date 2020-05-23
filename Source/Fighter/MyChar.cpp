@@ -149,7 +149,7 @@ void AMyChar::specialOn(float val) {
 }
 
 void AMyChar::MoveLeftRight(float val) {
-	if (!bAnim_ActionInMOtion)
+	if (!bAnim_ActionInMOtion && !bGotHit)
 		return;
 
 	//interopolation
@@ -188,7 +188,7 @@ void AMyChar::MoveLeftRight(float val) {
 
 
 void AMyChar::FirstAction() {
-	if (!bAnim_ActionInMOtion)
+	if (!bAnim_ActionInMOtion && !bGotHit)
 		return;
 	bActionPressed1 = true;
 	actionIndex = GiveMeAction();
@@ -213,7 +213,7 @@ void AMyChar::FirstAction() {
 }
 
 void AMyChar::SecondAction() {
-	if (!bAnim_ActionInMOtion)
+	if (!bAnim_ActionInMOtion && !bGotHit)
 		return;
 	bActionPressed1 = false;
 	

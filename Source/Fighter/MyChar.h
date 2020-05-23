@@ -78,6 +78,15 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
 	bool bisEnemy = false;
 
+	//reaction handle=======================================================================================
+	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
+	bool bGotHit = false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
+	int ReactionIndex = 0;
+
+
+	//------------------------------------------------------------------------------------------------------
 
 
 

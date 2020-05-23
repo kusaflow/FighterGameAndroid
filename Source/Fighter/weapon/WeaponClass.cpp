@@ -46,6 +46,94 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 		if (attackedChar && parent) {
 			if (attackedChar->bisEnemy != parent->bisEnemy) {
 				attackedChar->Health -= 10;
+
+				attackedChar->bGotHit = true;
+
+
+				//if Parent is Axe Man
+				if (parent->CharNumberIndex == 2) {
+					if (parent->PrevActionType_P_K_S == 1) {
+						if (parent->bActionPressed1) {
+							if (parent->PrevAction == 1) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 2) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 3) {
+								attackedChar->ReactionIndex = 2;
+							}
+							else if (parent->PrevAction == 4) {
+								attackedChar->ReactionIndex = 4;
+							}
+							else if (parent->PrevAction == 5) {
+								attackedChar->ReactionIndex = 3;
+							}
+						}
+						else {
+							if (parent->PrevAction == 1) {
+								attackedChar->ReactionIndex = 4;
+							}
+							else if (parent->PrevAction == 2) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 3) {
+								attackedChar->ReactionIndex = 3;
+							}
+							else if (parent->PrevAction == 4) {
+								attackedChar->ReactionIndex = 3;
+							}
+							else if (parent->PrevAction == 5) {
+								attackedChar->ReactionIndex = 1;
+							}
+						}
+					}
+					//===================================================================================================
+					else if (parent->PrevActionType_P_K_S == 2) {
+						if (parent->bActionPressed1) {
+							if (parent->PrevAction == 1) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 2) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 3) {
+								attackedChar->ReactionIndex = 2;
+							}
+							else if (parent->PrevAction == 4) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 5) {
+								attackedChar->ReactionIndex = 1;
+							}
+						}
+						else {
+							if (parent->PrevAction == 1) {
+								attackedChar->ReactionIndex = 3;
+							}
+							else if (parent->PrevAction == 2) {
+								attackedChar->ReactionIndex = 2;
+							}
+							else if (parent->PrevAction == 3) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 4) {
+								attackedChar->ReactionIndex = 1;
+							}
+							else if (parent->PrevAction == 5) {
+								attackedChar->ReactionIndex = 3;
+							}
+						}
+					}
+
+					//===========================================================================
+
+
+
+
+
+				}
+
 			}
 		}
 	}

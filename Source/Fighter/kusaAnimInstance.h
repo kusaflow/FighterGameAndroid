@@ -57,5 +57,14 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "HkusaVar")
 	bool bisDead= false;
 
+	//reation=============================================================================
+	UPROPERTY(BlueprintReadWrite, Category = "Reaction")
+	bool bGotHit = false;
+
+	bool bReaction_CanSetValueToMainPlayer = false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Reaction")
+	int ReactionIndex = 0;
+
 	
 };
