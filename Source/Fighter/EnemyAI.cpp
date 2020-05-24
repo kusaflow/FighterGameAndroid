@@ -89,7 +89,7 @@ void AEnemyAI::Level_1_AI(float dt) {
 			//1 is going towards
 			if (MovingTowardsPLayer == true) {
 				
-				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 100 || t%5 == 0) {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 100 || t%9 == 0) {
 					L1_AI_indexOfAction = 0;
 				}
 				else {
