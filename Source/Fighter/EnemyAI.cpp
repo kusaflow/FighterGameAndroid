@@ -45,8 +45,9 @@ void AEnemyAI::Level_1_AI(float dt) {
 	FCollisionQueryParams CollisionParams;
 	//======================
 
-	if (!bAnim_ActionInMOtion && !bGotHit)
+	if (!bAnim_ActionInMOtion && !bGotHit) {
 		return;
+	}
 
 	//if no action assigned then assign
 	
@@ -71,7 +72,6 @@ void AEnemyAI::Level_1_AI(float dt) {
 		else {
 			L1_AI_indexOfAction = 2;
 		}
-		L1_AI_indexOfAction = 2;
 		
 	}
 
@@ -81,7 +81,6 @@ void AEnemyAI::Level_1_AI(float dt) {
 	//validate and then perform-------------------------------------------------------------
 	if (L1_AI_indexOfAction == 1) {
 		//move 
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
 		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams))
 		{
 			int t = 0;
@@ -90,8 +89,7 @@ void AEnemyAI::Level_1_AI(float dt) {
 			//1 is going towards
 			if (MovingTowardsPLayer == true) {
 				
-				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200 || t%5 == 0) {
-					UE_LOG(LogTemp, Warning, TEXT("====================kusa======================"));
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 100 || t%5 == 0) {
 					L1_AI_indexOfAction = 0;
 				}
 				else {
@@ -118,12 +116,23 @@ void AEnemyAI::Level_1_AI(float dt) {
 	
 	if (L1_AI_indexOfAction == 2) {
 		//action
-		bPunchOn = true;
-		bKickOn = false;
-		bSpecial = false;
-		FirstAction();
 		
+		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
+			if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200) {
+				punchOn(1);
+				bKickOn = false;
+				bSpecial = false;
+				FirstAction();
+			}
+			else {
+				L1_AI_indexOfAction = 1;
+				MovingTowardsPLayer = true;
+			}
+		}
+
+
 		L1_AI_indexOfAction = 0;
+		//UE_LOG(LogTemp, Warning, TEXT("====================kusa======================"));
 	}
 
 

@@ -28,6 +28,7 @@ void UkusaAnimInstance::update() {
 		bisDead = player->bisDead;
 		if (actionIndex != 0){
 			bActionInMOtion = false;
+			player->actionIndex = 0;
 		}
 		if (bInAnimMotion)
 		{

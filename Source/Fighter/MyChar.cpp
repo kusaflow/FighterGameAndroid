@@ -80,7 +80,6 @@ void AMyChar::Tick(float DeltaTime)
 	}
 	
 	PreActionMove();
-	actionIndex = 0;
 
 	InActionAnimaManager(DeltaTime);
 
@@ -201,6 +200,7 @@ void AMyChar::MoveLeftRight(float val) {
 void AMyChar::FirstAction() {
 	if (!bAnim_ActionInMOtion && !bGotHit)
 		return;
+	
 	bActionPressed1 = true;
 	actionIndex = GiveMeAction();
 
@@ -217,7 +217,7 @@ void AMyChar::FirstAction() {
 	else {
 		return;
 	}
-	
+
 	PrevAction = actionIndex;
 	Anim_InActionMotionIndex = 1;
 	bAnim_ActionInMOtion = false;	
@@ -255,6 +255,7 @@ void AMyChar::ActionButtonUp() {
 
 int AMyChar::GiveMeAction() {
 
+	
 	//to start damage the player
 	bCanDoDamage = true;
 
@@ -285,6 +286,7 @@ int AMyChar::GiveMeAction() {
 			return (int)FMath::FRandRange(1,4);
 		
 		}
+		
 	}
 	//=====================================================================================================
 	else if (CharNumberIndex == 2)
