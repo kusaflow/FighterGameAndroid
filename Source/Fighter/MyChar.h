@@ -86,7 +86,10 @@ public:
 	int ReactionIndex = 0;
 
 
+	
 	//------------------------------------------------------------------------------------------------------
+	//timer to increment health
+	float TimerToIncrementHealth = 0;
 
 
 

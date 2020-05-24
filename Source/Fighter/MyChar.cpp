@@ -47,9 +47,9 @@ void AMyChar::BeginPlay()
 	CharNumberIndex = gameInstance->CharNumberIndex;
 
 	if (CharNumberIndex == 1) {
-		GetCharacterMovement()->MaxWalkSpeed = 145;
+		GetCharacterMovement()->MaxWalkSpeed = 218;
 	}else if (CharNumberIndex == 2) {
-		GetCharacterMovement()->MaxWalkSpeed = 145;
+		GetCharacterMovement()->MaxWalkSpeed = 218;
 	}
 
 	//setting health
@@ -99,6 +99,17 @@ void AMyChar::Tick(float DeltaTime)
 	if (!bisEnemy)
 		gameInstance->PHealth = Health;
 
+
+	//timer to increament health
+	if (TimerToIncrementHealth >= 60) {
+		TimerToIncrementHealth = 0;
+		Health += 10;
+		if (Health >= 500)
+			Health = 500;
+	}
+	else {
+		TimerToIncrementHealth += 10 * DeltaTime;
+	}
 
 
 }

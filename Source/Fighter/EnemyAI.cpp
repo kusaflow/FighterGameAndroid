@@ -6,6 +6,7 @@
 #include "DrawDebugHelpers.h"
 #include "CollisionQueryParams.h"
 #include "Engine/World.h"
+#include "Math/UnrealMathUtility.h"
 
 
 
@@ -24,7 +25,7 @@ void AEnemyAI::myTick(float dt) {
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
 
-	//Level_1_AI(dt);
+	Level_1_AI(dt);
 	
 }
 
@@ -34,6 +35,99 @@ void AEnemyAI::Level_1_AI(float dt) {
 	wakews up assign a move then go to sleep then wake up
 	then do a move
 	*/
+
+	//pre req
+	FHitResult OutHit;
+	FVector Start = GetRootComponent()->GetComponentLocation();
+
+	FVector ForwardVector = GetRootComponent()->GetForwardVector();
+	FVector End = ((ForwardVector * 1000.f) + Start);
+	FCollisionQueryParams CollisionParams;
+	//======================
+
+	if (!bAnim_ActionInMOtion && !bGotHit)
+		return;
+
+	//if no action assigned then assign
+	
+	if (L1_AI_indexOfAction == 0) {
+		/*
+		choose 3 digits
+		1 for move
+		2 for action
+		*/
+		L1_AI_indexOfAction = (int)FMath::FRandRange(1, 30);
+		int t = 0;
+		if (L1_AI_indexOfAction%7 == 0) {
+			t = (int)FMath::FRandRange(1, 30);
+			if (t%2 == 0) {
+				MovingTowardsPLayer = true;
+			}
+			else {
+				MovingTowardsPLayer = false;
+			}
+			L1_AI_indexOfAction = 1;
+		}
+		else {
+			L1_AI_indexOfAction = 2;
+		}
+		L1_AI_indexOfAction = 2;
+		
+	}
+
+
+
+
+	//validate and then perform-------------------------------------------------------------
+	if (L1_AI_indexOfAction == 1) {
+		//move 
+		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
+		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams))
+		{
+			int t = 0;
+			t = (int)FMath::FRandRange(1, 30);
+			UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
+			//1 is going towards
+			if (MovingTowardsPLayer == true) {
+				
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200 || t%5 == 0) {
+					UE_LOG(LogTemp, Warning, TEXT("====================kusa======================"));
+					L1_AI_indexOfAction = 0;
+				}
+				else {
+					MoveLeftRight(1);
+				}
+				
+			}
+			else {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X >= 700 || t % 5 == 0) {
+					if (t % 9 != 0) {
+						L1_AI_indexOfAction = 1;
+						MovingTowardsPLayer = true;
+					}
+				}
+				else {
+					MoveLeftRight(-1);
+				}
+			}
+		}
+	}
+	else {
+		MoveLeftRight(0);
+	}
+	
+	if (L1_AI_indexOfAction == 2) {
+		//action
+		bPunchOn = true;
+		bKickOn = false;
+		bSpecial = false;
+		FirstAction();
+		
+		L1_AI_indexOfAction = 0;
+	}
+
+
+	/*
 	FHitResult OutHit;
 	FVector Start = GetRootComponent()->GetComponentLocation();
 
@@ -56,4 +150,5 @@ void AEnemyAI::Level_1_AI(float dt) {
 		UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
 		
 	}
+	*/
 }

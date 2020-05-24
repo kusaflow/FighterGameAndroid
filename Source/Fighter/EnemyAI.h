@@ -21,8 +21,12 @@ public:
 	TSubclassOf<class AWeaponClass> axe;
 
 
-	UPROPERTY(EditAnywhere, category = "meshes")
-	int L1_AI_indexOfAction;
+	UPROPERTY(EditAnywhere, category = "AIL1")
+	int L1_AI_indexOfAction = 0;
+
+	UPROPERTY(EditAnywhere, category = "AI")
+	bool MovingTowardsPLayer = false;
+
 
 	
 public:

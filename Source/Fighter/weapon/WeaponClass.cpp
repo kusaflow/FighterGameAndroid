@@ -134,6 +134,15 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 
 				}
 
+
+
+				if (attackedChar->Health <= 0) {
+					attackedChar->bisDead = true;
+				}
+
+
+
+
 			}
 		}
 	}
