@@ -1,21 +1,17 @@
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Definitions.RiderLink.h
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/BlueprintProvider.cpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RiderLink\Private\BlueprintProvider.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\Toolkits/AssetEditorManager.h
-D:\games\UE_4.24\Engine\Source\Editor\Kismet\Public\BlueprintEditor.h
-D:\games\UE_4.24\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabFactory.h
-D:\games\UE_4.24\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabManager.h
-D:\games\UE_4.24\Engine\Source\Editor\Kismet\Public\BlueprintEditorModule.h
-D:\games\UE_4.24\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowCentricApplication.h
-D:\games\UE_4.24\Engine\Source\Developer/Merge/Public/Merge.h
-D:\games\UE_4.24\Engine\Source\Runtime\MessagingCommon\Public\MessageEndpointBuilder.h
-D:\games\UE_4.24\Engine\Source\Runtime\Messaging\Public\IMessagingModule.h
-D:\games\UE_4.24\Engine\Source\Runtime\MessagingCommon\Public\MessageHandlers.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Async/Async.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\HAL/Runnable.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\HAL/RunnableThread.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\HAL/PlatformAffinity.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformAffinity.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\Toolkits/AssetEditorManager.h
+D:\games\UE_4.25\Engine\Source\Editor\Kismet\Public\BlueprintEditor.h
+D:\games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabFactory.h
+D:\games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabManager.h
+D:\games\UE_4.25\Engine\Source\Editor\Kismet\Public\BlueprintEditorModule.h
+D:\games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowCentricApplication.h
+D:\games\UE_4.25\Engine\Source\Developer/Merge/Public/Merge.h
+D:\games\UE_4.25\Engine\Source\Runtime\MessagingCommon\Public\MessageEndpointBuilder.h
+D:\games\UE_4.25\Engine\Source\Runtime\Messaging\Public\IMessagingModule.h
+D:\games\UE_4.25\Engine\Source\Runtime\MessagingCommon\Public\MessageHandlers.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Async/Async.h
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/ProtocolFactory.cpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RiderLink\Private\ProtocolFactory.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\protocol/Protocol.h
@@ -24,50 +20,10 @@ D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\impl/RName.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\thirdparty.hpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\tsl/ordered_set.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdint
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\deque
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xmemory
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\limits
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cfloat
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\climits
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cwchar
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdio
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xatomic.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xutility
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstring
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\utility
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\functional
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\tuple
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\typeinfo
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_typeinfo.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\memory
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iosfwd
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vector
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\tsl\ordered_hash.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\algorithm
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cmath
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xtgmath.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iterator
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\istream
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ostream
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ios
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocnum
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\streambuf
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xiosbase
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\share.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\system_error
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cerrno
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\stdexcept
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xstring
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xcall_once.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xerrc.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocale
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xfacet
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\locale.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\tsl/ordered_map.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\optional\tl\optional.hpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\mpark/variant.hpp
@@ -76,7 +32,7 @@ D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\mpark\lib.hpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\nonstd/string_view.hpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cctype
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\serialization/Serializers.h
@@ -85,7 +41,7 @@ D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\types/DateTime.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\std/hash.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ctime
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\time.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\time.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\util/core_util.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\util\erase_if.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\util/gen_util.h
@@ -97,9 +53,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\chrono
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ratio
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\thr/xtimec.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\process.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_startup.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\process.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_startup.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_startup.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\thr/xthreads.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\sstream
@@ -116,9 +72,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\types/wrapper.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\util/core_traits.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\types/Void.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iostream
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\std/list.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\util\hashing.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\serialization/ISerializable.h
@@ -128,10 +83,6 @@ D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\serialization\DefaultAbstractDeclaration.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\std/unordered_map.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\unordered_map
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xhash
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\list
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xbit_ops.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\unordered_set
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\scheduler/base/IScheduler.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\logger/Logger.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdarg
@@ -163,126 +114,130 @@ D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\util\guards.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_core_cpp\pch.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\intern\InternScheduler.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\serialization/InternedAnySerializer.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\serialization/SerializationCtx.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\Windows.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\sdkddkver.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Windows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\sdkddkver.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\excpt.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\windef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\minwindef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnt.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\kernelspecs.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\basetsd.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\guiddef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack8.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack1.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack1.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\apiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\ktmtypes.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winbase.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\apisetcconv.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\minwinbase.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\processenv.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\fileapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\debugapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\utilapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\handleapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\errhandlingapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\fibersapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\namedpipeapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\profileapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\heapapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\ioapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\synchapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\interlockedapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\processthreadsapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\sysinfoapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\memoryapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\enclaveapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\threadpoollegacyapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\threadpoolapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\jobapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\jobapi2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\wow64apiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\libloaderapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\securitybaseapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\namespaceapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\systemtopologyapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\processtopologyapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\securityappcontainer.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\realtimeapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\winerror.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\timezoneapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\wingdi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack1.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winuser.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\tvout.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnls.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\datetimeapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\stringapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnls.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\wincon.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\consoleapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winver.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\verrsrc.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winreg.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\reason.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnetwk.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\wnnc.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\stralign.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\imm.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\ime_cmodes.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Misc/FileHelper.h
-D:\games\UE_4.24\Engine\Source\Runtime\EngineSettings\Classes\GeneralProjectSettings.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineSettings\GeneralProjectSettings.generated.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\windef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\minwindef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\kernelspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\basetsd.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\ktmtypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apisetcconv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\minwinbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\apiquery2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processenv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapifromapp.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\debugapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\utilapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\handleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\errhandlingapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fibersapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namedpipeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\profileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\heapapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ioapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\synchapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\interlockedapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processthreadsapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\sysinfoapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\memoryapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\enclaveapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoollegacyapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoolapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wow64apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\libloaderapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securitybaseapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namespaceapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\systemtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securityappcontainer.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\realtimeapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\winerror.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\timezoneapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wingdi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winuser.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\tvout.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\datetimeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\stringapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincon.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincontypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi3.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winver.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\verrsrc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winreg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\reason.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnetwk.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wnnc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\stralign.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\imm.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ime_cmodes.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/FileHelper.h
+D:\games\UE_4.25\Engine\Source\Runtime\EngineSettings\Classes\GeneralProjectSettings.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineSettings\GeneralProjectSettings.generated.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\wire\SocketWire.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\base/WireBase.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\protocol/MessageBroker.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\queue
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\wire\ByteBufferAsyncProcessor.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\wire\PkgInputStream.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\clsocket\src\SimpleSocket.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\io.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_io.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winsock2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\ws2def.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\inaddr.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\qos.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\Ws2tcpip.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\ws2ipdef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\in6addr.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\io.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_io.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winsock2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\ws2def.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\inaddr.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\qos.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Ws2tcpip.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\ws2ipdef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\in6addr.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\clsocket\src\Host.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\clsocket\src\StatTimer.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\thirdparty\clsocket\src\ActiveSocket.h
@@ -332,13 +287,13 @@ D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\Ri
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\scheduler\SimpleScheduler.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\scheduler\SingleThreadScheduler.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\include\rd_framework_cpp\scheduler\base/SingleThreadSchedulerBase.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
-D:\games\UE_4.24\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryModule.h
-D:\games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\Misc/AssetRegistryInterface.h
-D:\games\UE_4.24\Engine\Source\Runtime\AssetRegistry\Public\IAssetRegistry.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry\IAssetRegistry.generated.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+D:\games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryModule.h
+D:\games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\Misc/AssetRegistryInterface.h
+D:\games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\IAssetRegistry.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry\IAssetRegistry.generated.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RiderLink\Private\RdEditorProtocol/UE4Library/UE4Library.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/RdEditorProtocol/instantiations.cpp
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/RdEditorProtocol/pch_RdEditorRoot.cpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RiderLink\Private\RdEditorProtocol\pch_RdEditorRoot.h
@@ -380,41 +335,41 @@ D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/Ri
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/RdEditorProtocol/UE4Library/UnrealLogEvent.cpp
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/RiderLink.cpp
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RiderLink\Public\RiderLink.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
 D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RiderLink\Public\RiderOutputDevice.h
-D:\games\UE_4.24\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Classes\Editor/UnrealEdEngine.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\IPackageAutoSaver.h
-D:\games\UE_4.24\Engine\Source\Developer\SourceControl\Public\ISourceControlProvider.h
-D:\games\UE_4.24\Engine\Source\Developer\SourceControl\Public\ISourceControlOperation.h
-D:\games\UE_4.24\Engine\Source\Developer\SourceControl\Public\ISourceControlState.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\IDDCNotifications.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizer.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizerManager.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\UnrealEdEngine.generated.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\Kismet2/DebuggerCommands.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\UnrealEdGlobals.h
-D:\games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\IAssetViewport.h
-D:\games\UE_4.24\Engine\Source\Runtime\Slate\Public\Widgets/SViewport.h
-D:\games\UE_4.24\Engine\Source\Runtime\SlateCore\Public\Input/HittestGrid.h
-D:\games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\IHeadMountedDisplay.h
-D:\games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayTypes.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\HeadMountedDisplayTypes.generated.h
-D:\games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\LateUpdateManager.h
-D:\games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\IXRTrackingSystem.h
-D:\games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\IIdentifiableXRDevice.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\IIdentifiableXRDevice.generated.h
-D:\games\UE_4.24\Engine\Source\Runtime\HeadMountedDisplay\Public\IXRInput.h
-D:\games\UE_4.24\Engine\Source\Editor\LevelEditor\Public\LevelEditor.h
-D:\games\UE_4.24\Engine\Source\Editor\LevelEditor\Public\ILevelEditor.h
-D:\games\UE_4.24\Engine\Source\Editor\LevelEditor\Public\ViewportTypeDefinition.h
-D:\games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
-D:\games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
-D:\games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerStart.h
-D:\games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/NavigationObjectBase.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationObjectBase.generated.h
-D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PlayerStart.generated.h
+D:\games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Classes\Editor/UnrealEdEngine.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\IPackageAutoSaver.h
+D:\games\UE_4.25\Engine\Source\Developer\SourceControl\Public\ISourceControlProvider.h
+D:\games\UE_4.25\Engine\Source\Developer\SourceControl\Public\ISourceControlOperation.h
+D:\games\UE_4.25\Engine\Source\Developer\SourceControl\Public\ISourceControlState.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\IDDCNotifications.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizer.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizerManager.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\UnrealEdEngine.generated.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\Kismet2/DebuggerCommands.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\UnrealEdGlobals.h
+D:\games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\IAssetViewport.h
+D:\games\UE_4.25\Engine\Source\Runtime\Slate\Public\Widgets/SViewport.h
+D:\games\UE_4.25\Engine\Source\Runtime\SlateCore\Public\Input/HittestGrid.h
+D:\games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\IHeadMountedDisplay.h
+D:\games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayTypes.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\HeadMountedDisplayTypes.generated.h
+D:\games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\LateUpdateManager.h
+D:\games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\IXRTrackingSystem.h
+D:\games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\IIdentifiableXRDevice.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\IIdentifiableXRDevice.generated.h
+D:\games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\IXRInput.h
+D:\games\UE_4.25\Engine\Source\Editor\LevelEditor\Public\LevelEditor.h
+D:\games\UE_4.25\Engine\Source\Editor\LevelEditor\Public\ILevelEditor.h
+D:\games\UE_4.25\Engine\Source\Editor\LevelEditor\Public\ViewportTypeDefinition.h
+D:\games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+D:\games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
+D:\games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerStart.h
+D:\games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/NavigationObjectBase.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationObjectBase.generated.h
+D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PlayerStart.generated.h
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/RiderOutputDevice.cpp
 D:/programming/unreal/MAinProjects/Fighter/Plugins/Developer/RiderLink/Source/RiderLink/Private/UE4TypesMarshallers.cpp

@@ -26,7 +26,7 @@ AMyChar::AMyChar()
 	cameraBoom->bDoCollisionTest = false;
 	cameraBoom->TargetArmLength = 800;
 	cameraBoom->SocketOffset = FVector(0.f, 0.f, 0.f);
-	cameraBoom->RelativeRotation = (FRotator(-20, -90, 0.f));
+	cameraBoom->SetRelativeRotation(FRotator(-20, -90, 0.f));
 	//cameraBoom->RelativeRotation = FRotator(0.f, 0.f, 0.f);
 	cameraBoom->bUsePawnControlRotation = false;
 

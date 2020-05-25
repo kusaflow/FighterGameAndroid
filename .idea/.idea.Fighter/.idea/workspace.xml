@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb1a344d-f026-4266-ba30-ae3732be401c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Fighter/.idea/.idea.Fighter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Fighter/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Fighter/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Fighter/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fighter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fighter/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fighter/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrints/BP_EnemyAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/BP_EnemyAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fighter.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink-0002.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink-0002.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink-0063.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink-0063.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Default.rc2.res" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Default.rc2.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Definitions.RiderLink.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Definitions.RiderLink.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Module.RiderLink.cpp.obj.response" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Module.RiderLink.cpp.obj.response" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Module.RiderLink.cpp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/Module.RiderLink.cpp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.dll.response" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.dll.response" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.suppressed.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.suppressed.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0003.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0003.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0003.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0003.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0004.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0004.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0004.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0004.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0005.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0005.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0005.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0005.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0006.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0006.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0006.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0006.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0007.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0007.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0007.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0007.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0100.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0100.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0101.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0101.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0101.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0101.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0103.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0103.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0103.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0103.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0105.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0105.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0105.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0105.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0106.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0106.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0106.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0106.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0107.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0107.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0107.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0107.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0108.dll.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0108.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0108.lib.response" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0108.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink.dll.response" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink.dll.response" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink.suppressed.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Fighter/EnemyAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Fighter/EnemyAI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Fighter/EnemyAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Fighter/EnemyAI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Fighter/MyChar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Fighter/MyChar.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/Fighter/MyChar.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Source/Fighter/MyChar.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cOlUG1SC1BfkL0kkly4xRNIQeF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Fighter" type="CppProject" factoryName="C++ Project">
+      <configuration_1>
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Android" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_1>
+      <configuration_2>
+        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="PLATFORM" value="Android" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_2>
+      <configuration_3>
+        <option name="CONFIGURATION" value="Development" />
+        <option name="PLATFORM" value="Win32" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_3>
+      <configuration_4>
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Android" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_4>
+      <configuration_5>
+        <option name="CONFIGURATION" value="Shipping" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_5>
+      <configuration_6>
+        <option name="CONFIGURATION" value="Shipping" />
+        <option name="PLATFORM" value="Win32" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_6>
+      <configuration_7>
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_7>
+      <configuration_8>
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Win32" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_8>
+      <configuration_9>
+        <option name="CONFIGURATION" value="Development" />
+        <option name="PLATFORM" value="Android" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_9>
+      <configuration_10>
+        <option name="CONFIGURATION" value="Shipping" />
+        <option name="PLATFORM" value="Android" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_10>
+      <configuration_11>
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Win32" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_11>
+      <configuration_12>
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_12>
+      <configuration_13>
+        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="PLATFORM" value="Win32" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_13>
+      <configuration_14>
+        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_14>
+      <configuration_15>
+        <option name="CONFIGURATION" value="Development" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_15>
+      <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/Fighter.vcxproj" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb1a344d-f026-4266-ba30-ae3732be401c" name="Default Changelist" comment="" />
+      <created>1590407544453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590407544453</updated>
+      <workItem from="1590408005971" duration="2401000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="567" y="97" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590410642593">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state x="567" y="97" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.832@0.0.1536.832" timestamp="1590410642593" />
+  </component>
+</project>

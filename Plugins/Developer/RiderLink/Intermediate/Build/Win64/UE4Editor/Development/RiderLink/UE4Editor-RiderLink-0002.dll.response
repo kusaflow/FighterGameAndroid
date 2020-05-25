@@ -1,4 +1,5 @@
-/MANIFEST:NO
+/MANIFEST:EMBED
+/MANIFESTINPUT:D:\games\UE_4.25\Engine\Build\Windows\Resources\Default-Win64.manifest
 /NOLOGO
 /DEBUG
 /errorReport:prompt
@@ -19,8 +20,8 @@
 /DELAYLOAD:"DBGHELP.DLL"
 /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.16299.0\ucrt\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.16299.0\um\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\ucrt\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
 /NODEFAULTLIB:"LIBCPMT"
 /NODEFAULTLIB:"LIBCMTD"
@@ -62,18 +63,18 @@
 "D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\libs\Win\x64\Release\rd_framework_cpp.lib"
 "D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\libs\Win\x64\Release\clsocket.lib"
 "D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Source\RD\libs\Win\x64\Release\rd_core_cpp.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\DesktopPlatform\UE4Editor-DesktopPlatform.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Json\UE4Editor-Json.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\UnrealEd\UE4Editor-UnrealEd.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\UnrealEdMessages\UE4Editor-UnrealEdMessages.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\MessagingCommon\UE4Editor-MessagingCommon.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\AssetRegistry\UE4Editor-AssetRegistry.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\ContentBrowser\UE4Editor-ContentBrowser.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
-"D:\games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\SlateCore\UE4Editor-SlateCore.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\DesktopPlatform\UE4Editor-DesktopPlatform.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Json\UE4Editor-Json.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\UnrealEd\UE4Editor-UnrealEd.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\UnrealEdMessages\UE4Editor-UnrealEdMessages.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\MessagingCommon\UE4Editor-MessagingCommon.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\AssetRegistry\UE4Editor-AssetRegistry.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\ContentBrowser\UE4Editor-ContentBrowser.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
+"D:\games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\SlateCore\UE4Editor-SlateCore.lib"
 /OUT:"D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Binaries\Win64\UE4Editor-RiderLink-0002.dll"
 /IMPLIB:"D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\UE4Editor-RiderLink-0002.suppressed.lib"
 /PDB:"D:\programming\unreal\MAinProjects\Fighter\Plugins\Developer\RiderLink\Binaries\Win64\UE4Editor-RiderLink-0002.pdb"

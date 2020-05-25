@@ -69,8 +69,13 @@ void AEnemyAI::Level_1_AI(float dt) {
 			}
 			L1_AI_indexOfAction = 1;
 		}
-		else {
+		else if (L1_AI_indexOfAction%4 == 0) {
+			sleepTime = 0;
+			sleepTotime = (int)FMath::FRandRange(25, 100);
 			L1_AI_indexOfAction = 2;
+		}
+		else {
+			L1_AI_indexOfAction = 5;
 		}
 		
 	}
@@ -114,7 +119,16 @@ void AEnemyAI::Level_1_AI(float dt) {
 		MoveLeftRight(0);
 	}
 	
+
 	if (L1_AI_indexOfAction == 2) {
+		if (sleepTime >= sleepTotime) {
+			L1_AI_indexOfAction = 0;
+		}
+		else {
+			sleepTime += 20 * GetWorld()->GetDeltaSeconds();
+		}
+	}
+	else if (L1_AI_indexOfAction == 5) {
 		//action
 		
 		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {

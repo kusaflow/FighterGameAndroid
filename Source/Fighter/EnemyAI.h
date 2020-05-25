@@ -27,7 +27,8 @@ public:
 	UPROPERTY(EditAnywhere, category = "AI")
 	bool MovingTowardsPLayer = false;
 
-
+	//the increment of time is 20 per second
+	int sleepTime = 0, sleepTotime = 0;
 	
 public:
 
