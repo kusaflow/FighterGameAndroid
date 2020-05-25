@@ -71,7 +71,7 @@ void AEnemyAI::Level_1_AI(float dt) {
 		}
 		else if (L1_AI_indexOfAction%4 == 0) {
 			sleepTime = 0;
-			sleepTotime = (int)FMath::FRandRange(25, 100);
+			sleepTotime = FMath::FRandRange(1, 50);
 			L1_AI_indexOfAction = 2;
 		}
 		else {
@@ -121,22 +121,34 @@ void AEnemyAI::Level_1_AI(float dt) {
 	
 
 	if (L1_AI_indexOfAction == 2) {
+		//UE_LOG(LogTemp, Warning, TEXT("%f======================%f"), (float)sleepTime, (float)sleepTotime);
 		if (sleepTime >= sleepTotime) {
 			L1_AI_indexOfAction = 0;
 		}
 		else {
-			sleepTime += 20 * GetWorld()->GetDeltaSeconds();
+			if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 300) {
+					++sleepTime;
+				}
+			}
+			sleepTime += 20.0f * GetWorld()->GetDeltaSeconds();
 		}
 	}
 	else if (L1_AI_indexOfAction == 5) {
 		//action
-		
+		L1_AI_indexOfAction = 0;
 		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
 			if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200) {
-				punchOn(1);
-				bKickOn = false;
+				bPunchOn = false;
+				bKickOn = true;
 				bSpecial = false;
 				FirstAction();
+
+				//sleep time
+				sleepTime = 0;
+				sleepTotime = FMath::FRandRange(20, 50);
+				L1_AI_indexOfAction = 2;
+
 			}
 			else {
 				L1_AI_indexOfAction = 1;
@@ -144,8 +156,6 @@ void AEnemyAI::Level_1_AI(float dt) {
 			}
 		}
 
-
-		L1_AI_indexOfAction = 0;
 		//UE_LOG(LogTemp, Warning, TEXT("====================kusa======================"));
 	}
 

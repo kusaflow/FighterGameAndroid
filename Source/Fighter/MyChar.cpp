@@ -111,6 +111,16 @@ void AMyChar::Tick(float DeltaTime)
 	}
 
 
+
+	//stop motion when in animation
+	if (bAnim_ActionInMOtion && bGotHit) {
+		GetCharacterMovement()->MaxWalkSpeed = 0;
+	}
+	else {
+		GetCharacterMovement()->MaxWalkSpeed = 218;
+	}
+
+
 }
 
 // Called to bind functionality to input

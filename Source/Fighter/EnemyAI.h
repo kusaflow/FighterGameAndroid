@@ -21,14 +21,17 @@ public:
 	TSubclassOf<class AWeaponClass> axe;
 
 
-	UPROPERTY(EditAnywhere, category = "AIL1")
+	UPROPERTY(BlueprintReadOnly,EditAnywhere, category = "kusaAIL1")
 	int L1_AI_indexOfAction = 0;
 
-	UPROPERTY(EditAnywhere, category = "AI")
+	UPROPERTY(BlueprintReadOnly,EditAnywhere, category = "kusaAI")
 	bool MovingTowardsPLayer = false;
 
 	//the increment of time is 20 per second
-	int sleepTime = 0, sleepTotime = 0;
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, category = "kusaAI")
+	float sleepTime = 0;
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, category = "kusaAI")
+	float sleepTotime = 0;
 	
 public:
 
