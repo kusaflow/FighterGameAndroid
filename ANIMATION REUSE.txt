@@ -9,6 +9,28 @@ MYKRATOR=======================================
 		HK_1_1_ - heavy
 		HK_1_3_ - heavy
 		HK_1_4_____1_5 - lite
-	special
-		HK_1_8___
 	
+
+SwordMan==============================================
+	LimbHit
+		AxeMan_LL_1 - lite
+		LK_1_3_ - Lite
+		LK_1_4_ - heavy
+		LK_1_9_ - lite
+		HP_1_3_ - lite
+		HP_1_4_ - heavy
+		HP_1_6_ - heavy
+		HK_1_1_ - heavy
+		HK_1_3_ - heavy
+		HK_1_4_____1_5 - lite
+	SpecialHit
+		Axe_s_1
+		Axe_s_2
+		Axe_s_3
+		Axe_s_4
+		Axe_s_5
+	Sword Lite
+		Axe_AL_1 to 5
+	Sword Heavy
+		Axe_AH_1 to 5
+		
