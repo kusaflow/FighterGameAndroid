@@ -273,26 +273,26 @@ int AMyChar::GiveMeAction() {
 	{
 		if (bPunchOn) {
 			if (bActionPressed1) {
-				//return TempRet;
+				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 			else {
-				//return TempRet;
+				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 		}
 		else if (bKickOn) {
 			if (bActionPressed1) {
-				//return TempRet;
+				return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 			else {
-				//return TempRet;
+				return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 		}
 		else if (bSpecial){	
-			//return TempRet;
+			return TempRet;
 			return (int)FMath::FRandRange(1,4);
 		
 		}
