@@ -25,7 +25,7 @@ void AEnemyAI::myTick(float dt) {
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
 
-	Level_1_AI(dt);
+	//Level_1_AI(dt);
 	
 }
 
