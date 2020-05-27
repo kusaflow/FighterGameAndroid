@@ -392,12 +392,58 @@ void AMyChar::InActionAnimaManager(float dt)
 				}
 
 			}
+			else {
+				if (PrevAction == 1 || PrevAction == 2 || PrevAction == 3
+					|| PrevAction == 4 || PrevAction == 5 || PrevAction == 6) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = -2000 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 3 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 1500 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 4 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
 		}
 		//kick Actions
 		else if (PrevActionType_P_K_S == 2){
 			//Action 2
 			if (!bActionPressed1) {
-				if (PrevAction == 4)
+				if (PrevAction == 1) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 100;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -500 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					
+				}
+				else if (PrevAction == 4)
 				{
 					//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
 					//Action for action 4 ,kicking, Action_2
