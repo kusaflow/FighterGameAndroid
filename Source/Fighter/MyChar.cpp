@@ -301,6 +301,7 @@ int AMyChar::GiveMeAction() {
 	//=====================================================================================================
 	else if (CharNumberIndex == 2)
 	{
+		return TempRet;
 		if (bPunchOn) {
 			if (bActionPressed1) {
 				return (int)FMath::FRandRange(1, 6);
@@ -653,13 +654,51 @@ void AMyChar::InActionAnimaManager(float dt)
 		{
 			if (bActionPressed1)
 			{
-				if (PrevAction == 5)
+				if (PrevAction == 1 || PrevAction == 2 || PrevAction == 4)
 				{
 					//Action for action 5 ,Limb, Action_1	
-					if(Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
 					{
-						GetCharacterMovement()->JumpZVelocity = 100;
+						GetCharacterMovement()->Velocity.X = -2000 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+				else if (PrevAction == 3) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 50;
 						Jump();
+						GetCharacterMovement()->Velocity.X = -500 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
+			else {
+				if (PrevAction == 1 || PrevAction == 2 || PrevAction == 3
+					|| PrevAction == 4 || PrevAction == 5) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = -2000 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
@@ -675,15 +714,6 @@ void AMyChar::InActionAnimaManager(float dt)
 					{
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
-					}
-					else if (Anim_InActionMotionIndex == 2) {
-						GetCharacterMovement()->Velocity.X = -300 * dirFactor;
-
-						if (bAnimInMotion) {
-							GetCharacterMovement()->Velocity.X = 0;
-							Anim_InActionMotionIndex++;
-							bAnimInMotion = false;
-						}
 					}
 				}
 				else if (PrevAction == 4)
