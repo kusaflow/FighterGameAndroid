@@ -119,6 +119,10 @@ void AMyChar::Tick(float DeltaTime)
 		GetCharacterMovement()->MaxWalkSpeed = 218;
 	}
 
+	//android Action Mapping
+	if (bAndroid_Action_iterateTimer)
+		Android_ActionTimingResolver += (25.0f * DeltaTime);
+
 
 }
 
@@ -149,33 +153,24 @@ void AMyChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void AMyChar::punchOn(float val) {
 	if (val == 1)
 		bPunchOn = true;
-	else
-		bPunchOn = false;
+	
 }
 
 void AMyChar::kickOn(float val) {
 	if (val == 1)
 		bKickOn = true; 
-	else
-		bKickOn= false;
+	
 }
 
 void AMyChar::specialOn(float val) {
 	if (val == 1)
 		bSpecial = true;
-	else
-		bSpecial = false;
+	
 }
 
 void AMyChar::MoveLeftRight(float val) {
 	if (!bAnim_ActionInMOtion && !bGotHit)
 		return;
-
-	if (Andro_moveVal == 1) {
-		UE_LOG(LogTemp, Warning, TEXT("kukukuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu"));
-
-	}
-
 
 	//interopolation
 	if (val == -1 || Andro_moveVal == -1) {
@@ -233,6 +228,7 @@ void AMyChar::FirstAction() {
 		return;
 	}
 
+
 	PrevAction = actionIndex;
 	Anim_InActionMotionIndex = 1;
 	bAnim_ActionInMOtion = false;	
@@ -274,10 +270,12 @@ int AMyChar::GiveMeAction() {
 	//to start damage the player
 	bCanDoDamage = true;
 
+
 	if(CharNumberIndex == 1)
 	{
 		if (bPunchOn) {
 			if (bActionPressed1) {
+				
 				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
@@ -306,7 +304,6 @@ int AMyChar::GiveMeAction() {
 	//=====================================================================================================
 	else if (CharNumberIndex == 2)
 	{
-		return TempRet;
 		if (bPunchOn) {
 			if (bActionPressed1) {
 				return (int)FMath::FRandRange(1, 6);
@@ -664,7 +661,7 @@ void AMyChar::InActionAnimaManager(float dt)
 					//Action for action 5 ,Limb, Action_1	
 					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
 					{
-						GetCharacterMovement()->Velocity.X = -2000 * dirFactor;
+						GetCharacterMovement()->Velocity.X = -1300 * dirFactor;
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
@@ -870,4 +867,38 @@ void AMyChar::Testing(float val)
 }
 
 
- 
+///android actions
+void AMyChar::Android_Action_Pressed(float val) {
+	bAndroid_Action_iterateTimer = true;
+	Android_ActionTimingResolver = 0;
+	bPunchOn = false;
+	bKickOn = false;
+	bSpecial = false;	
+}
+
+
+void AMyChar::Android_Action_Released(float val) {
+	
+	if (val == 1) {
+		bPunchOn = true;
+	}
+	else if (val == 2) {
+		bKickOn = true;
+	}
+	else if (val == 3) {
+		bSpecial = true;
+	}
+	else {
+		return;
+	}
+
+	if (Android_ActionTimingResolver >= 19.0f) {
+		SecondAction();
+	}
+	else {
+		
+		FirstAction();
+	}
+	bAndroid_Action_iterateTimer = false;
+	Android_ActionTimingResolver = 0;
+}

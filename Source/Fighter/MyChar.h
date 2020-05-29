@@ -92,11 +92,18 @@ public:
 	int Andro_moveVal = 0;
 
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusaAndroid")
+	float Android_ActionTimingResolver = 0;
+
+	bool bAndroid_Action_iterateTimer = false;
 
 	
 	//------------------------------------------------------------------------------------------------------
 	//timer to increment health
+	UPROPERTY(BlueprintReadWrite, Category = "kusaAndroid")
 	float TimerToIncrementHealth = 0;
+
+	
 
 
 
@@ -117,19 +124,19 @@ public:
 	UFUNCTION()// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	UFUNCTION()
 	void punchOn(float val);
 	
-	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	UFUNCTION()
 	void kickOn(float val);
 	
-	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	UFUNCTION()
 	void specialOn(float val);
 
-	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	UFUNCTION()
 	void FirstAction();
 
-	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	UFUNCTION()
 	void SecondAction();
 
 	UFUNCTION()
@@ -155,6 +162,13 @@ public:
 	UFUNCTION()
 	void Testing(float val);
 
+
+
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	void Android_Action_Pressed(float val);
+
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	void Android_Action_Released(float val);
 
 	
 	//UFUNCTION(BlueprintCallable, Category = "kusaFun")
