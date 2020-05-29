@@ -7,7 +7,6 @@
 #include "kusaGameInstance.h"
 #include "Math/UnrealMathUtility.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Math/UnrealMathSSE.h"
 #include "weapon/WeaponClass.h"
 #include "Engine/World.h"
 #include "Engine/EngineTypes.h"
@@ -172,18 +171,24 @@ void AMyChar::MoveLeftRight(float val) {
 	if (!bAnim_ActionInMOtion && !bGotHit)
 		return;
 
+	if (Andro_moveVal == 1) {
+		UE_LOG(LogTemp, Warning, TEXT("kukukuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu"));
+
+	}
+
+
 	//interopolation
-	if (val == -1) {
+	if (val == -1 || Andro_moveVal == -1) {
 		if(RightLeftMoveVal >= -1){
 			RightLeftMoveVal -= GetWorld()->GetDeltaSeconds() * 3;
 		}
 	}
-	else if (val == 1) {
+	else if (val == 1 || Andro_moveVal == 1) {
 		if (RightLeftMoveVal <= 1) {
 			RightLeftMoveVal += GetWorld()->GetDeltaSeconds() * 3;
 		}
 	}
-	else if (val == 0) {
+	else if (val == 0 || Andro_moveVal == 0) {
 		if (RightLeftMoveVal > 0) {
 			RightLeftMoveVal -= GetWorld()->GetDeltaSeconds() * 3;
 		}

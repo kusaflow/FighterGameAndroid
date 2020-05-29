@@ -86,6 +86,13 @@ public:
 	int ReactionIndex = 0;
 
 
+	//androidProperty
+	//handled in ui
+	UPROPERTY(BlueprintReadWrite, Category = "kusaAndroid")
+	int Andro_moveVal = 0;
+
+
+
 	
 	//------------------------------------------------------------------------------------------------------
 	//timer to increment health
@@ -110,19 +117,19 @@ public:
 	UFUNCTION()// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void punchOn(float val);
 	
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void kickOn(float val);
 	
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void specialOn(float val);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void FirstAction();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void SecondAction();
 
 	UFUNCTION()
@@ -135,7 +142,7 @@ public:
 	void TestAction();
 
 	//move left right
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void MoveLeftRight(float val);
 
 	//PreJumpMOveBefore Action
