@@ -47,7 +47,11 @@ void AMyChar::BeginPlay()
 
 	if (CharNumberIndex == 1) {
 		GetCharacterMovement()->MaxWalkSpeed = 218;
-	}else if (CharNumberIndex == 2) {
+	}
+	else if (CharNumberIndex == 2) {
+		GetCharacterMovement()->MaxWalkSpeed = 218;
+	}
+	else if (CharNumberIndex == 3) {
 		GetCharacterMovement()->MaxWalkSpeed = 218;
 	}
 
@@ -151,21 +155,27 @@ void AMyChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 }
 
 void AMyChar::punchOn(float val) {
-	if (val == 1)
+	if (val == 1) {
 		bPunchOn = true;
-	
+		bKickOn = false;
+		bSpecial = false;
+	}
 }
 
 void AMyChar::kickOn(float val) {
-	if (val == 1)
-		bKickOn = true; 
-	
+	if (val == 1) {
+		bKickOn = true;
+		bSpecial = false;
+		bPunchOn = false;
+	}
 }
 
 void AMyChar::specialOn(float val) {
-	if (val == 1)
+	if (val == 1) {
 		bSpecial = true;
-	
+		bKickOn = false;
+		bPunchOn = false;
+	}
 }
 
 void AMyChar::MoveLeftRight(float val) {
@@ -715,13 +725,16 @@ void AMyChar::InActionAnimaManager(float dt)
 		}
 		else if (PrevActionType_P_K_S == 2) {
 			if (!bActionPressed1) {
-				if (PrevAction == 3)
-				{
-					//Action for action 3 ,Limb, !Action_1	
-					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+				if (PrevAction == 3) {
+					if (Anim_InActionMotionIndex == 1)
 					{
-						Anim_InActionMotionIndex++;
-						bAnimInMotion = false;
+						GetCharacterMovement()->MaxWalkSpeed = 218;
+						MoveForward();
+						if (bAnimInMotion) {
+							GetCharacterMovement()->MaxWalkSpeed = 218;
+							Anim_InActionMotionIndex++;
+							bAnimInMotion = false;
+						}
 					}
 				}
 				else if (PrevAction == 4)
@@ -895,6 +908,94 @@ void AMyChar::InActionAnimaManager(float dt)
 				}
 			}
 		}
+		else if (PrevActionType_P_K_S == 2) {
+			if (bActionPressed1) {
+				if (PrevAction == 1) {
+					//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
+
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 100;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -200 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 100;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -600 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 3 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+
+				}
+				else if (PrevAction == 2) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = -1400 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+			}
+			else {
+				if (PrevAction == 6) {
+					if (Anim_InActionMotionIndex == 1 )
+					{
+						GetCharacterMovement()->MaxWalkSpeed = 218;
+						MoveForward();
+						if (bAnimInMotion) {
+							GetCharacterMovement()->MaxWalkSpeed = 218;
+							Anim_InActionMotionIndex++;
+							bAnimInMotion = false;
+						}
+					}
+				}
+				else if (PrevAction == 6) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion) {
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2)
+					{
+						GetCharacterMovement()->MaxWalkSpeed = 218;
+						MoveForward();
+						if (bAnimInMotion) {
+							GetCharacterMovement()->MaxWalkSpeed = 218;
+							Anim_InActionMotionIndex++;
+							bAnimInMotion = false;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+void AMyChar::MoveForward() {
+	if (Controller != nullptr) {
+		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
+
+
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
+
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		AddMovementInput(Direction, 1);
 	}
 }
 

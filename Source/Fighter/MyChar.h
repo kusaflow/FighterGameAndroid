@@ -162,6 +162,8 @@ public:
 	UFUNCTION()
 	void Testing(float val);
 
+	UFUNCTION()
+	void MoveForward();
 
 
 	UFUNCTION(BlueprintCallable, category = "kusaFnx")
