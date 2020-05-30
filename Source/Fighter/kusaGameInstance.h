@@ -17,7 +17,7 @@ class FIGHTER_API UkusaGameInstance : public UGameInstance
 public:
 	//player variables
 	UPROPERTY(BlueprintReadWrite)
-	int CharNumberIndex = 2;
+	int CharNumberIndex = 3;
 
 	UPROPERTY(BlueprintReadWrite)
 	int EnemyNumberIndex = 2;
