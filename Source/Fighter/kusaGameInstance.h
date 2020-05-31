@@ -20,7 +20,7 @@ public:
 	int CharNumberIndex = 3;
 
 	UPROPERTY(BlueprintReadWrite)
-	int EnemyNumberIndex = 2;
+	int EnemyNumberIndex = 3;
 
 	UPROPERTY(BlueprintReadWrite)
 	float EHealth = 0;

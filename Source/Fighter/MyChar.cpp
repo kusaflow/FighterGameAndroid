@@ -219,7 +219,6 @@ void AMyChar::FirstAction() {
 		return;
 	
 	bActionPressed1 = true;
-	actionIndex = GiveMeAction();
 
 	if(bPunchOn)
 	{
@@ -235,10 +234,12 @@ void AMyChar::FirstAction() {
 		return;
 	}
 
+	actionIndex = GiveMeAction();
 
 	PrevAction = actionIndex;
 	Anim_InActionMotionIndex = 1;
-	bAnim_ActionInMOtion = false;	
+	bAnim_ActionInMOtion = false;
+	bAnimInMotion = false;
 }
 
 void AMyChar::SecondAction() {
@@ -264,6 +265,7 @@ void AMyChar::SecondAction() {
 	PrevAction = actionIndex;
 	Anim_InActionMotionIndex = 1;
 	bAnim_ActionInMOtion = false;
+	bAnimInMotion = false;
 }
 
 void AMyChar::ActionButtonUp() {
@@ -311,6 +313,7 @@ int AMyChar::GiveMeAction() {
 	//=====================================================================================================
 	else if (CharNumberIndex == 2)
 	{
+		return TempRet;
 		if (bPunchOn) {
 			if (bActionPressed1) {
 				return (int)FMath::FRandRange(1, 6);
@@ -457,6 +460,23 @@ void AMyChar::InActionAnimaManager(float dt)
 					}
 
 				}
+				else if (PrevAction == 2) {
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->JumpZVelocity = 300;
+						Jump();
+						GetCharacterMovement()->Velocity.X = -500 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+
+				}
 				else if (PrevAction == 4)
 				{
 					//UE_LOG(LogTemp, Warning, TEXT("################################################################################3"));
@@ -530,6 +550,22 @@ void AMyChar::InActionAnimaManager(float dt)
 						bAnimInMotion = false;
 					}
 				}
+				else if (PrevAction == 9 || PrevAction == 10)
+				{
+					//Action for action 8 ,kicking, Action_2	
+					if (Anim_InActionMotionIndex == 1 && bAnimInMotion)
+					{
+						GetCharacterMovement()->Velocity.X = -1400 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+					else if (Anim_InActionMotionIndex == 2 && bAnimInMotion) {
+						GetCharacterMovement()->Velocity.X = 0 * dirFactor;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
+				}
+
 			}
 			else {
 				if (PrevAction == 1 || PrevAction == 3 || PrevAction == 4 || PrevAction == 5
@@ -1095,16 +1131,16 @@ void AMyChar::InActionAnimaManager(float dt)
 				}
 			}
 			else if (PrevAction == 8) {
-			if (Anim_InActionMotionIndex == 1)
-			{
-				GetCharacterMovement()->MaxWalkSpeed = 100;
-				MoveForward();
-				if (bAnimInMotion) {
-					GetCharacterMovement()->MaxWalkSpeed = 218;
-					Anim_InActionMotionIndex++;
-					bAnimInMotion = false;
+				if (Anim_InActionMotionIndex == 1)
+				{
+					GetCharacterMovement()->MaxWalkSpeed = 100;
+					MoveForward();
+					if (bAnimInMotion) {
+						GetCharacterMovement()->MaxWalkSpeed = 218;
+						Anim_InActionMotionIndex++;
+						bAnimInMotion = false;
+					}
 				}
-			}
 			}
 
 
