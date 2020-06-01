@@ -5,6 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
 #include "../MyChar.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 AWeaponClass::AWeaponClass()
@@ -45,95 +46,64 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	if (parent->bCanDoDamage == true) {
 		if (attackedChar && parent) {
 			if (attackedChar->bisEnemy != parent->bisEnemy) {
-				attackedChar->Health -= 10;
+				//attackedChar->Health -= 10;
 
 				attackedChar->bGotHit = true;
 
 
+				//reaction System
 				//if Parent is Axe Man
-				if (parent->CharNumberIndex == 2) {
-					if (parent->PrevActionType_P_K_S == 1) {
-						if (parent->bActionPressed1) {
-							if (parent->PrevAction == 1) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 2) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 3) {
-								attackedChar->ReactionIndex = 2;
-							}
-							else if (parent->PrevAction == 4) {
-								attackedChar->ReactionIndex = 4;
-							}
-							else if (parent->PrevAction == 5) {
-								attackedChar->ReactionIndex = 3;
-							}
-						}
-						else {
-							if (parent->PrevAction == 1) {
-								attackedChar->ReactionIndex = 4;
-							}
-							else if (parent->PrevAction == 2) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 3) {
-								attackedChar->ReactionIndex = 3;
-							}
-							else if (parent->PrevAction == 4) {
-								attackedChar->ReactionIndex = 3;
-							}
-							else if (parent->PrevAction == 5) {
-								attackedChar->ReactionIndex = 1;
-							}
-						}
-					}
-					//===================================================================================================
-					else if (parent->PrevActionType_P_K_S == 2) {
-						if (parent->bActionPressed1) {
-							if (parent->PrevAction == 1) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 2) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 3) {
-								attackedChar->ReactionIndex = 2;
-							}
-							else if (parent->PrevAction == 4) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 5) {
-								attackedChar->ReactionIndex = 1;
-							}
-						}
-						else {
-							if (parent->PrevAction == 1) {
-								attackedChar->ReactionIndex = 3;
-							}
-							else if (parent->PrevAction == 2) {
-								attackedChar->ReactionIndex = 2;
-							}
-							else if (parent->PrevAction == 3) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 4) {
-								attackedChar->ReactionIndex = 1;
-							}
-							else if (parent->PrevAction == 5) {
-								attackedChar->ReactionIndex = 3;
-							}
-						}
-					}
-
-					//===========================================================================
-
-
-
-
-
+				if (attackedChar->CharNumberIndex == 1) {
+					attackedChar->ReactionIndex = (int)FMath::FRandRange(1, 5);
+				}
+				else if (attackedChar->CharNumberIndex == 2) {
+					attackedChar->ReactionIndex = (int)FMath::FRandRange(1, 4);
+				}
+				else if (attackedChar->CharNumberIndex == 3) {
+					attackedChar->ReactionIndex = (int)FMath::FRandRange(1, 4);
 				}
 
+				//-==-====------------------------==================================================================================
+
+
+				//Damage System----------------------------------------------------------------------------------------------------
+				
+				//damage amount resolver
+				if (parent->CharNumberIndex == 1) {
+					if (parent->PrevActionType_P_K_S == 1) {
+						if (parent->bActionPressed1) {
+							attackedChar->Health -= 12;
+						}
+						else {
+							attackedChar->Health -= 22;
+						}
+					}
+					else if (parent->PrevActionType_P_K_S == 2) {
+						if (parent->bActionPressed1) {
+							attackedChar->Health -= 20;
+						}
+						else {
+							attackedChar->Health -= 35;
+						}
+					}
+					else {
+						attackedChar->Health -= 8;
+					}
+
+				}
+				
+				
+				
+				
+				//Damage Count Resolver
+				if (parent->bCanDoDamage) {
+					if (parent->CharNumberIndex == 1) {
+						if (parent->PrevActionType_P_K_S == 1 || parent->PrevActionType_P_K_S == 2) {
+							parent->bCanDoDamage = false;
+						}
+					}
+				}
+				//====================================================================================================================
 
 
 				if (attackedChar->Health <= 0) {

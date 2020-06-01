@@ -110,7 +110,7 @@ void AMyChar::Tick(float DeltaTime)
 			Health = 500;
 	}
 	else {
-		TimerToIncrementHealth += 10 * DeltaTime;
+		//TimerToIncrementHealth += 10 * DeltaTime;
 	}
 
 
@@ -284,27 +284,21 @@ int AMyChar::GiveMeAction() {
 	{
 		if (bPunchOn) {
 			if (bActionPressed1) {
-				
-				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 			else {
-				return TempRet;
 				return (int)FMath::FRandRange(1,7);
 			}
 		}
 		else if (bKickOn) {
 			if (bActionPressed1) {
-				return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 			else {
-				return TempRet;
 				return (int)FMath::FRandRange(1, 11);
 			}
 		}
 		else if (bSpecial){	
-			return TempRet;
 			return (int)FMath::FRandRange(1,4);
 		
 		}

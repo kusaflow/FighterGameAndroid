@@ -34,3 +34,6 @@ SwordMan==============================================
 	Sword Heavy
 		Axe_AH_1 to 5
 		
+	
+	reaction all from kratos
+
