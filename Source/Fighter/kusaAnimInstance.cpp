@@ -52,6 +52,17 @@ void UkusaAnimInstance::update() {
 
 		if (bReaction_CanSetValueToMainPlayer && !bGotHit) {
 			player->bGotHit = false;
+			///////////////////////////////////////////////////////////////////////////////////
+			if (player->CharNumberIndex == 1) {
+				player->GetCharacterMovement()->MaxWalkSpeed = 218;
+			}
+			else if (player->CharNumberIndex == 2) {
+				player->GetCharacterMovement()->MaxWalkSpeed = 218;
+			}
+			else if (player->CharNumberIndex == 3) {
+				player->GetCharacterMovement()->MaxWalkSpeed = 218;
+			}
+			////////////////////////////////////////////////////////////////////////////////
 			bReaction_CanSetValueToMainPlayer = false;
 		}
 		

@@ -61,6 +61,9 @@ void AMyChar::BeginPlay()
 
 	bisEnemy = false;
 
+	//turing character 
+	GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, -90, 0));
+
 	
 	//SetCharNumber();
 }
@@ -74,13 +77,7 @@ void AMyChar::Tick(float DeltaTime)
 
 	//GetRootComponent()->SetRelativeRotation(FRotator(0, -180, 0));
 	
-	//turing character 
-	if (bEnemyIsOnRight) {
-		GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0,-90,0));
-	}
-	else {
-		GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
-	}
+	
 	
 	PreActionMove();
 
@@ -176,7 +173,7 @@ void AMyChar::specialOn(float val) {
 }
 
 void AMyChar::MoveLeftRight(float val) {
-	if (!bAnim_ActionInMOtion && !bGotHit)
+	if (!bAnim_ActionInMOtion || bGotHit)
 		return;
 
 	//interopolation
@@ -215,7 +212,7 @@ void AMyChar::MoveLeftRight(float val) {
 
 
 void AMyChar::FirstAction() {
-	if (!bAnim_ActionInMOtion && !bGotHit)
+	if (!bAnim_ActionInMOtion || bGotHit)
 		return;
 	
 	bActionPressed1 = true;
@@ -236,6 +233,9 @@ void AMyChar::FirstAction() {
 
 	actionIndex = GiveMeAction();
 
+	UE_LOG(LogTemp, Warning, TEXT("0000000000000000000000000000000000000000000000000000000000000000000000000"));
+
+
 	PrevAction = actionIndex;
 	Anim_InActionMotionIndex = 1;
 	bAnim_ActionInMOtion = false;
@@ -243,7 +243,7 @@ void AMyChar::FirstAction() {
 }
 
 void AMyChar::SecondAction() {
-	if (!bAnim_ActionInMOtion && !bGotHit)
+	if (!bAnim_ActionInMOtion || bGotHit)
 		return;
 	bActionPressed1 = false;
 	

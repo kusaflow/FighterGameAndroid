@@ -69,7 +69,7 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 				//Damage System----------------------------------------------------------------------------------------------------
 				
 				//damage amount resolver
-				if (parent->CharNumberIndex == 1) {
+				if (parent->CharNumberIndex == 1 || parent->CharNumberIndex == 2 || parent->CharNumberIndex == 3) {
 					if (parent->PrevActionType_P_K_S == 1) {
 						if (parent->bActionPressed1) {
 							attackedChar->Health -= 12;

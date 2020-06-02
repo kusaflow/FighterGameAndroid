@@ -20,12 +20,15 @@ void AEnemyAI::myBeginPlay() {
 
 void AEnemyAI::myTick(float dt) {
 
+	bEnemyIsOnRight = false;
 	
 	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
 
-	//Level_1_AI(dt);
+	GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
+
+	Level_1_AI(dt);
 	
 }
 
@@ -41,11 +44,11 @@ void AEnemyAI::Level_1_AI(float dt) {
 	FVector Start = GetRootComponent()->GetComponentLocation();
 
 	FVector ForwardVector = GetRootComponent()->GetForwardVector();
-	FVector End = ((ForwardVector * 1000.f) + Start);
+	FVector End = ((ForwardVector * 1000.f) - Start);
 	FCollisionQueryParams CollisionParams;
 	//======================
 
-	if (!bAnim_ActionInMOtion && !bGotHit) {
+	if (!bAnim_ActionInMOtion || bGotHit) {
 		return;
 	}
 
@@ -90,7 +93,7 @@ void AEnemyAI::Level_1_AI(float dt) {
 		{
 			int t = 0;
 			t = (int)FMath::FRandRange(1, 30);
-			UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
+			//UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
 			//1 is going towards
 			if (MovingTowardsPLayer == true) {
 				
@@ -139,6 +142,8 @@ void AEnemyAI::Level_1_AI(float dt) {
 		L1_AI_indexOfAction = 0;
 		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
 			if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200) {
+
+				UE_LOG(LogTemp, Warning, TEXT("====================Action======================"));
 				bPunchOn = false;
 				bKickOn = true;
 				bSpecial = false;
