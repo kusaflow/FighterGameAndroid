@@ -26,10 +26,12 @@ void AEnemyAI::myTick(float dt) {
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
 
-	GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
+	//GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
 
-	Level_1_AI(dt);
+	//Level_1_AI(dt);
 	
+	l1AI(dt);
+
 }
 
 void AEnemyAI::Level_1_AI(float dt) {
@@ -44,7 +46,7 @@ void AEnemyAI::Level_1_AI(float dt) {
 	FVector Start = GetRootComponent()->GetComponentLocation();
 
 	FVector ForwardVector = GetRootComponent()->GetForwardVector();
-	FVector End = ((ForwardVector * 1000.f) - Start);
+	FVector End = ((ForwardVector * 1000.f) + Start);
 	FCollisionQueryParams CollisionParams;
 	//======================
 
@@ -91,29 +93,32 @@ void AEnemyAI::Level_1_AI(float dt) {
 		//move 
 		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams))
 		{
-			int t = 0;
+			int t = 60;
 			t = (int)FMath::FRandRange(1, 30);
-			//UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
+			UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
 			//1 is going towards
-			if (MovingTowardsPLayer == true) {
+			if (MovingTowardsPLayer) {
 				
 				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 100 || t%9 == 0) {
 					L1_AI_indexOfAction = 0;
+					//UE_LOG(LogTemp, Warning, TEXT("%f"), (float)(OutHit.Actor.Get()->GetActorLocation().X - Start.X));
 				}
 				else {
-					MoveLeftRight(1);
+					//towards player
+					MoveLeftRight(-1);
 				}
 				
 			}
 			else {
-				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X >= 700 || t % 5 == 0) {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X >= 1000 || t % 50 == 0) {
 					if (t % 9 != 0) {
 						L1_AI_indexOfAction = 1;
 						MovingTowardsPLayer = true;
 					}
 				}
 				else {
-					MoveLeftRight(-1);
+					//away from playerb
+					MoveLeftRight(1);
 				}
 			}
 		}
@@ -156,8 +161,14 @@ void AEnemyAI::Level_1_AI(float dt) {
 
 			}
 			else {
+
 				L1_AI_indexOfAction = 1;
-				MovingTowardsPLayer = true;
+				if ((int)(FMath::FRandRange(0, 100)) % 2 == 0) {
+					MovingTowardsPLayer = true;
+				}
+				else {
+					//MovingTowardsPLayer = false;
+				}
 			}
 		}
 
@@ -189,4 +200,20 @@ void AEnemyAI::Level_1_AI(float dt) {
 		
 	}
 	*/
+}
+
+void AEnemyAI::l1AI(float dt) {
+	FHitResult OutHit;
+	FVector Start = GetRootComponent()->GetComponentLocation();
+
+	FVector ForwardVector = GetRootComponent()->GetForwardVector();
+	FVector End = ((ForwardVector * 1000.f) + Start);
+	FCollisionQueryParams CollisionParams;
+
+	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
+	//-1 is forward movement
+
+
+	MoveLeftRight(-1);
+
 }

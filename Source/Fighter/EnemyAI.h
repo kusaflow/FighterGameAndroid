@@ -44,4 +44,7 @@ public:
 	UFUNCTION()
 	void Level_1_AI(float dt);
 	
+	UFUNCTION()
+	void l1AI(float dt);
+
 };

@@ -196,17 +196,25 @@ void AMyChar::MoveLeftRight(float val) {
 		}
 	}
 
+
 	
+
 	
 	if (Controller != nullptr) {
 		//GetRootComponent()->GetChildComponent(1)->SetWorldRotation(FRotator(0, -90, 0));
 
 
-		const FRotator Rotation = Controller->GetControlRotation();
-		const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
+		 const FRotator Rotation = Controller->GetControlRotation();
+		 const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
 
-		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-		AddMovementInput(Direction, RightLeftMoveVal);
+		 const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		 if (bEnemyIsOnRight) {
+			 AddMovementInput(Direction, RightLeftMoveVal);
+		 }
+		 else {
+			 AddMovementInput(Direction, RightLeftMoveVal*-1);
+		 }
+		
 	}
 }
 
@@ -307,7 +315,6 @@ int AMyChar::GiveMeAction() {
 	//=====================================================================================================
 	else if (CharNumberIndex == 2)
 	{
-		return TempRet;
 		if (bPunchOn) {
 			if (bActionPressed1) {
 				return (int)FMath::FRandRange(1, 6);
@@ -328,10 +335,29 @@ int AMyChar::GiveMeAction() {
 			return (int)FMath::FRandRange(1, 6);
 
 		}
-		return TempRet;
 	}
 	//=====================================================================================================
 	else if (CharNumberIndex == 3) {
+		if (bPunchOn) {
+			if (bActionPressed1) {
+				return (int)FMath::FRandRange(1, 6);
+			}
+			else {
+				return (int)FMath::FRandRange(1, 6);
+			}
+		}
+		else if (bKickOn) {
+			if (bActionPressed1) {
+				return (int)FMath::FRandRange(1, 8);
+			}
+			else {
+				return (int)FMath::FRandRange(1, 8);
+			}
+		}
+		else if (bSpecial) {
+			return (int)FMath::FRandRange(1, 8);
+
+		}
 		return TempRet;
 	}
 	return 0;
