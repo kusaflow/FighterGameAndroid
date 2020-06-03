@@ -203,6 +203,11 @@ void AEnemyAI::Level_1_AI(float dt) {
 }
 
 void AEnemyAI::l1AI(float dt) {
+	if (!bAnim_ActionInMOtion || bGotHit) {
+		return;
+	}
+
+
 	FHitResult OutHit;
 	FVector Start = GetRootComponent()->GetComponentLocation();
 
@@ -213,7 +218,109 @@ void AEnemyAI::l1AI(float dt) {
 	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
 	//-1 is forward movement
 
+	//decide the role
+	if (L1_AI_indexOfAction == 0) {
+		/*
+		choose 3 digits
+		1 for move
+		2 for action
+		*/
+		L1_AI_indexOfAction = (int)FMath::FRandRange(1, 30);
+		int t = 0;
+		// do movement
+		if (L1_AI_indexOfAction % 7 == 0) {
+			t = (int)FMath::FRandRange(1, 30);
+			if (t % 2 == 0) {
+				MovingTowardsPLayer = true;
+			}
+			else {
+				MovingTowardsPLayer = false;
+			}
+			L1_AI_indexOfAction = 1;
+		}
+		//go to sleep
+		else if (L1_AI_indexOfAction % 8 == 0) {
+			sleepTime = 0;
+			sleepTotime = FMath::FRandRange(1, 50);
+			L1_AI_indexOfAction = 2;
+		}
+		//hit bro hit
+		else {
+			L1_AI_indexOfAction = 5;
+		}
 
-	MoveLeftRight(-1);
+	}
+
+
+	// do the role
+	if (L1_AI_indexOfAction == 1) {
+		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
+			int t = 60;
+			t = (int)FMath::FRandRange(1, 30);
+
+			if (MovingTowardsPLayer) {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X >= 100) {
+					if (t%22 != 0)
+						MoveLeftRight(-1);
+					else {
+						if ((int)(FMath::FRandRange(1, 10)) % 8 == 0) {
+							L1_AI_indexOfAction = 0;
+						}
+						else {
+							sleepTime = 0;
+							sleepTotime = FMath::FRandRange(1, 50);
+							L1_AI_indexOfAction = 2;
+						}
+					}
+
+				}
+				else {
+					L1_AI_indexOfAction = 0;
+				}
+			}
+			else {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 900) {
+					if (t % 22 != 0)
+						MoveLeftRight(1);
+					else {
+						if ((int)(FMath::FRandRange(1, 10)) % 8 == 0) {
+							L1_AI_indexOfAction = 0;
+						}
+						else {
+							sleepTime = 0;
+							sleepTotime = FMath::FRandRange(1, 50);
+							L1_AI_indexOfAction = 2;
+						}
+					}
+				}
+				else {
+					L1_AI_indexOfAction = 0;
+				}
+			}
+
+
+
+
+		}
+	}
+	else {
+		MoveLeftRight(0);
+	}
+	if (L1_AI_indexOfAction == 2) {
+		if (sleepTime >= sleepTotime) {
+			L1_AI_indexOfAction = 0;
+		}
+		else {
+			if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
+				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 300) {
+					//++sleepTime;
+				}
+			}
+			sleepTime += 20.0f * GetWorld()->GetDeltaSeconds();
+		}
+	}
+	else if (L1_AI_indexOfAction == 5){
+		L1_AI_indexOfAction = 0;
+	}
 
 }
