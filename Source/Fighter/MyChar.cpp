@@ -64,6 +64,7 @@ void AMyChar::BeginPlay()
 	//turing character 
 	GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, -90, 0));
 
+	HitEnergy = gameInstance->MaxHitEnergy;
 	
 	//SetCharNumber();
 }
@@ -95,9 +96,10 @@ void AMyChar::Tick(float DeltaTime)
 	}
 	//health
 
-	if (!bisEnemy)
+	if (!bisEnemy) {
 		gameInstance->PHealth = Health;
-
+		gameInstance->HitEnergyPLayer = HitEnergy;
+	}
 
 	//timer to increament health
 	if (TimerToIncrementHealth >= 60) {
@@ -111,6 +113,17 @@ void AMyChar::Tick(float DeltaTime)
 	}
 
 
+	 //timer to increment energy
+	 HitEnergy += 4 * DeltaTime;
+		
+	
+
+	if (HitEnergy < 0) {
+		HitEnergy = 0;
+	}
+
+	if (HitEnergy >= 100)
+		HitEnergy = 100;
 
 	//stop motion when in animation
 	if (bGotHit) 
@@ -225,18 +238,31 @@ void AMyChar::FirstAction() {
 	
 	bActionPressed1 = true;
 
+	float priceOfAttack = 0;
+
 	if(bPunchOn)
 	{
 		PrevActionType_P_K_S = 1;
+		priceOfAttack = 10;
+		
 	}else if (bKickOn)
 	{
 		PrevActionType_P_K_S = 2;
+		priceOfAttack = 13;
 	}else if (bSpecial)
 	{
 		PrevActionType_P_K_S = 3;
+		priceOfAttack = 40;
 	}
 	else {
 		return;
+	}
+
+	if (HitEnergy - priceOfAttack < 0) {
+		return;
+	}
+	else {
+		HitEnergy -= priceOfAttack;
 	}
 
 	actionIndex = GiveMeAction();
@@ -255,19 +281,33 @@ void AMyChar::SecondAction() {
 		return;
 	bActionPressed1 = false;
 	
+	float priceOfAttack = 0;
+
+
 	if(bPunchOn)
 	{
 		PrevActionType_P_K_S = 1;
+		priceOfAttack = 18;
 	}else if (bKickOn)
 	{
 		PrevActionType_P_K_S = 2;
+		priceOfAttack = 25;
 	}else if (bSpecial)
 	{
 		PrevActionType_P_K_S = 3;
+		priceOfAttack = 40;
 	}
 	else {
 		return;
 	}
+
+	if (HitEnergy - priceOfAttack < 0) {
+		return;
+	}
+	else {
+		HitEnergy -= priceOfAttack;
+	}
+
 	actionIndex = GiveMeAction();
 
 	PrevAction = actionIndex;

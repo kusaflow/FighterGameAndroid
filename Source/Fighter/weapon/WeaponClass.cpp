@@ -97,7 +97,7 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 				
 				//Damage Count Resolver
 				if (parent->bCanDoDamage) {
-					if (parent->CharNumberIndex == 1) {
+					if (parent->CharNumberIndex == 1 || parent->CharNumberIndex == 2 || parent->CharNumberIndex == 3) {
 						if (parent->PrevActionType_P_K_S == 1 || parent->PrevActionType_P_K_S == 2) {
 							parent->bCanDoDamage = false;
 						}

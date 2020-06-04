@@ -31,6 +31,14 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	float MaxHealth = 500;
 
+	UPROPERTY(BlueprintReadWrite, Category = "Energy")
+	float MaxHitEnergy = 100;
 
-	
+	UPROPERTY(BlueprintReadWrite, Category = "Energy")
+	float HitEnergyPLayer=0;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Energy")
+	float HitEnergyEnemy=0;
+
+
 };

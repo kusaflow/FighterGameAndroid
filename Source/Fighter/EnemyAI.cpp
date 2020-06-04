@@ -25,6 +25,7 @@ void AEnemyAI::myTick(float dt) {
 	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
 	CharNumberIndex = gameInstance->EnemyNumberIndex;
 	gameInstance->EHealth = Health;
+	gameInstance->HitEnergyEnemy = HitEnergy;
 
 	//GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, 90, 0));
 
@@ -212,10 +213,10 @@ void AEnemyAI::l1AI(float dt) {
 	FVector Start = GetRootComponent()->GetComponentLocation();
 
 	FVector ForwardVector = GetRootComponent()->GetForwardVector();
-	FVector End = ((ForwardVector * 1000.f) + Start);
+	FVector End = ((ForwardVector * 1100.f) + Start);
 	FCollisionQueryParams CollisionParams;
 
-	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
+	//DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
 	//-1 is forward movement
 
 	//decide the role
@@ -302,6 +303,9 @@ void AEnemyAI::l1AI(float dt) {
 
 
 		}
+		else {
+			MoveLeftRight(-1);
+		}
 	}
 	else {
 		MoveLeftRight(0);
@@ -321,6 +325,41 @@ void AEnemyAI::l1AI(float dt) {
 	}
 	else if (L1_AI_indexOfAction == 5){
 		L1_AI_indexOfAction = 0;
+		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
+			if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200) {
+				//--------------action Set=====================================
+				bPunchOn = false;
+				bKickOn = true;
+				bSpecial = false;
+				FirstAction();
+
+				//sleep time
+				sleepTime = 0;
+				sleepTotime = FMath::FRandRange(10, 30);
+				L1_AI_indexOfAction = 2;
+
+			}
+			else {
+				L1_AI_indexOfAction = 1;
+				if ((int)(FMath::FRandRange(0, 100)) % 30 == 0) {
+					sleepTime = 0;
+					sleepTotime = FMath::FRandRange(1, 25);
+					L1_AI_indexOfAction = 2;
+				}
+				else {
+					if ((int)(FMath::FRandRange(0, 100)) % 40 == 0){
+						MovingTowardsPLayer = false;
+					}
+					else {
+						MovingTowardsPLayer = false;
+					}
+				}
+			}
+		}
+		else {
+			L1_AI_indexOfAction = 1;
+			MovingTowardsPLayer = false;
+		}
 	}
 
 }

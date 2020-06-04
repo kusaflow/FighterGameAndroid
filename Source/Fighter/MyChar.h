@@ -86,6 +86,8 @@ public:
 	int ReactionIndex = 0;
 
 
+
+
 	//androidProperty
 	//handled in ui
 	UPROPERTY(BlueprintReadWrite, Category = "kusaAndroid")
@@ -100,10 +102,12 @@ public:
 	
 	//------------------------------------------------------------------------------------------------------
 	//timer to increment health
-	UPROPERTY(BlueprintReadWrite, Category = "kusaAndroid")
+	UPROPERTY(BlueprintReadWrite, Category = "kusaH")
 	float TimerToIncrementHealth = 0;
 
-	
+	UPROPERTY(BlueprintReadWrite, Category = "kusaEnergy")
+	float HitEnergy = 0;
+
 
 
 
