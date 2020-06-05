@@ -65,6 +65,7 @@ void AMyChar::BeginPlay()
 	GetRootComponent()->GetChildComponent(1)->SetRelativeRotation(FRotator(0, -90, 0));
 
 	HitEnergy = gameInstance->MaxHitEnergy;
+	HitEnergyShouldBe = HitEnergy;
 	
 	//SetCharNumber();
 }
@@ -99,10 +100,19 @@ void AMyChar::Tick(float DeltaTime)
 	if (!bisEnemy) {
 		gameInstance->PHealth = Health;
 		gameInstance->HitEnergyPLayer = HitEnergy;
+
+		if (gameInstance->EHealth <= 0 || gameInstance->PHealth <= 0) {
+			gameInstance->bisGameOver = true;
+			gameInstance->bWeWon = true;
+			if (gameInstance->PHealth <= 0) {
+				gameInstance->bWeWon = false;
+			}
+		}
+
 	}
 
 	//timer to increament health
-	if (TimerToIncrementHealth >= 60) {
+	if (TimerToIncrementHealth >= 40) {
 		TimerToIncrementHealth = 0;
 		Health += 10;
 		if (Health >= 500)
@@ -114,16 +124,27 @@ void AMyChar::Tick(float DeltaTime)
 
 
 	 //timer to increment energy
-	 HitEnergy += 4 * DeltaTime;
+	 HitEnergyShouldBe += 4 * DeltaTime;
 		
 	
 
-	if (HitEnergy < 0) {
-		HitEnergy = 0;
+	if (HitEnergyShouldBe < 0) {
+		HitEnergyShouldBe = 0;
 	}
 
-	if (HitEnergy >= 100)
-		HitEnergy = 100;
+	if (HitEnergyShouldBe >= 100)
+		HitEnergyShouldBe = 100;
+
+	if (HitEnergyShouldBe > HitEnergy) {
+
+		HitEnergy += 4 * DeltaTime;
+	}
+	else if (HitEnergyShouldBe < HitEnergy) {
+		HitEnergy -= 30 * DeltaTime;
+	}
+	else {
+
+	}
 
 	//stop motion when in animation
 	if (bGotHit) 
@@ -258,11 +279,11 @@ void AMyChar::FirstAction() {
 		return;
 	}
 
-	if (HitEnergy - priceOfAttack < 0) {
+	if (HitEnergyShouldBe - priceOfAttack < 0) {
 		return;
 	}
 	else {
-		HitEnergy -= priceOfAttack;
+		HitEnergyShouldBe -= priceOfAttack;
 	}
 
 	actionIndex = GiveMeAction();
@@ -301,11 +322,11 @@ void AMyChar::SecondAction() {
 		return;
 	}
 
-	if (HitEnergy - priceOfAttack < 0) {
+	if (HitEnergyShouldBe - priceOfAttack < 0) {
 		return;
 	}
 	else {
-		HitEnergy -= priceOfAttack;
+		HitEnergyShouldBe -= priceOfAttack;
 	}
 
 	actionIndex = GiveMeAction();

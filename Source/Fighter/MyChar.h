@@ -108,7 +108,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "kusaEnergy")
 	float HitEnergy = 0;
 
-
+	float HitEnergyShouldBe;
 
 
 	//0 for nothing

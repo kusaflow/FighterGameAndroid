@@ -216,7 +216,7 @@ void AEnemyAI::l1AI(float dt) {
 	FVector End = ((ForwardVector * 1100.f) + Start);
 	FCollisionQueryParams CollisionParams;
 
-	//DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
+	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
 	//-1 is forward movement
 
 	//decide the role
@@ -281,7 +281,7 @@ void AEnemyAI::l1AI(float dt) {
 			}
 			else {
 				if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 900) {
-					if (t % 22 != 0)
+					if (t % 10 != 0)
 						MoveLeftRight(1);
 					else {
 						if ((int)(FMath::FRandRange(1, 10)) % 8 == 0) {
