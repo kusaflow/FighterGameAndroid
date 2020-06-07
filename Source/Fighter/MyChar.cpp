@@ -66,6 +66,9 @@ void AMyChar::BeginPlay()
 
 	HitEnergy = gameInstance->MaxHitEnergy;
 	HitEnergyShouldBe = HitEnergy;
+
+	gameInstance->EHealth = Health;
+	gameInstance->PHealth = Health;
 	
 	//SetCharNumber();
 }
