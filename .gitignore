@@ -90,3 +90,5 @@ DerivedDataCache/*
 /httpRequests/
 
 Plugins/Developer/RiderLink/*
+
+androidExpo/*
