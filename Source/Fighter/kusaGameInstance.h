@@ -46,5 +46,19 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "GameOver")
 	bool bWeWon = false;
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusacoin")
+	int xp = 10000;
+
+	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
+	bool bHave_axe= false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
+	bool bHave_sword = false;
+
+	//weapons Acttual price
+	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
+	int weaponPrice = 2000;
+
+
 
 };
