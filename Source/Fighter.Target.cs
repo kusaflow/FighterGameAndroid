@@ -17,8 +17,7 @@ public class FighterTarget : TargetRules
             ExtraModuleNames.Add("OnlineSubsystem");
             ExtraModuleNames.Add("AndroidAdvertising");
 
-            PrivateDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "OnlineSubsystem" });
-            DynamicallyLoadedModuleNames.Add("OnlineSubsystemGooglePlay");
+           
         }
 
     }
