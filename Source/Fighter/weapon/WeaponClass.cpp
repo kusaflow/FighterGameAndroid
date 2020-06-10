@@ -6,6 +6,7 @@
 #include "Components/BoxComponent.h"
 #include "../MyChar.h"
 #include "Math/UnrealMathUtility.h"
+#include "../kusaGameInstance.h"
 
 // Sets default values
 AWeaponClass::AWeaponClass()
@@ -50,6 +51,13 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 
 				attackedChar->bGotHit = true;
 
+				UkusaGameInstance* gameInstance = Cast<UkusaGameInstance>(GetGameInstance());;
+				if (attackedChar->bisEnemy) {
+					gameInstance->bEnemyHitToPlayReaction = true;
+				}
+				else {
+					gameInstance->bPlayerHitToPlayReaction = true;
+				}
 
 				//reaction System
 				//if Parent is Axe Man

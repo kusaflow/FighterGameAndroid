@@ -59,6 +59,13 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
 	int weaponPrice = 2000;
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusaHealth")
+	bool bPlayerHitToPlayReaction = false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "kusaHealth")
+	bool bEnemyHitToPlayReaction = false;
+
+
 
 
 };

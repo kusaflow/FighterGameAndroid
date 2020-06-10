@@ -83,7 +83,6 @@ void AMyChar::Tick(float DeltaTime)
 	//GetRootComponent()->SetRelativeRotation(FRotator(0, -180, 0));
 	
 	
-	
 	PreActionMove();
 
 	InActionAnimaManager(DeltaTime);
