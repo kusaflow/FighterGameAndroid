@@ -55,6 +55,23 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
 	bool bHave_sword = false;
 
+	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
+	bool bmat1 = false;
+	
+	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
+	bool bmat2 = false;
+	
+	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
+	bool bmat3 = false;
+	
+	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
+	bool bmat4 = false;
+	
+	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
+	bool bmat5 = false;
+
+
+
 	//weapons Acttual price
 	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
 	int weaponPrice = 2000;
