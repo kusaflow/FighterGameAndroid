@@ -23,6 +23,13 @@ public:
 	int EnemyNumberIndex = 1;
 
 	UPROPERTY(BlueprintReadWrite)
+	int EnemyMatIndex = 1;
+	
+	UPROPERTY(BlueprintReadWrite)
+	int CharMatIndex = 1;
+
+
+	UPROPERTY(BlueprintReadWrite)
 	float EHealth = 0;
 
 	UPROPERTY(BlueprintReadWrite)

@@ -44,6 +44,9 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 {
 	AMyChar* attackedChar = Cast<AMyChar>(OtherActor);
 	AMyChar* parent = Cast<AMyChar>(GetAttachParentActor());
+
+	int damage = 0;
+
 	if (parent->bCanDoDamage == true) {
 		if (attackedChar && parent) {
 			if (attackedChar->bisEnemy != parent->bisEnemy) {
@@ -80,26 +83,29 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 				if (parent->CharNumberIndex == 1 || parent->CharNumberIndex == 2 || parent->CharNumberIndex == 3) {
 					if (parent->PrevActionType_P_K_S == 1) {
 						if (parent->bActionPressed1) {
-							attackedChar->Health -= 12;
+							damage = 12;
 						}
 						else {
-							attackedChar->Health -= 22;
+							damage = 22;
 						}
 					}
 					else if (parent->PrevActionType_P_K_S == 2) {
 						if (parent->bActionPressed1) {
-							attackedChar->Health -= 20;
+							damage = 20;
 						}
 						else {
-							attackedChar->Health -= 35;
+							damage = 35;
 						}
 					}
 					else {
-						attackedChar->Health -= 8;
+						damage = 8;
 					}
 
 				}
 				
+
+				//apply damage
+				attackedChar->Health -= damage;
 				
 				
 				
