@@ -48,7 +48,7 @@ public:
 	float HitEnergyEnemy=0;
 
 	UPROPERTY(BlueprintReadWrite, Category = "GameOver")
-	bool bisGameOver = false;
+	bool bisGameOver = false; 
 
 	UPROPERTY(BlueprintReadWrite, Category = "GameOver")
 	bool bWeWon = false;
