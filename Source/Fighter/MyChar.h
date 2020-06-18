@@ -47,6 +47,10 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int CharNumberIndex = 0;
 
+	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	int CharMaterialIndex = 0;
+
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameInstance")
 	class UkusaGameInstance* gameInstance;
 
@@ -85,29 +89,6 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "HkusaAction")
 	int ReactionIndex = 0;
 
-	//material===================================================================================================
-	UPROPERTY(EditDefaultsOnly, category = "kusaMat")
-	class UMaterialInstance* mat0;
-
-	UPROPERTY(EditDefaultsOnly, category = "kusaMat")
-	class UMaterialInstance* mat1;
-
-	UPROPERTY(EditDefaultsOnly, category = "kusaMat")
-	class UMaterialInstance* mat2;
-
-	UPROPERTY(EditDefaultsOnly, category = "kusaMat")
-	class UMaterialInstance* mat3;
-
-	UPROPERTY(EditDefaultsOnly, category = "kusaMat")
-	class UMaterialInstance* mat4;
-
-	UPROPERTY(EditDefaultsOnly, category = "kusaMat")
-	class UMaterialInstance* mat5;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, category = "kusaMat")
-    class UMaterialInstance* finalMat;
-    	
-	//------------------------------------------------------------------------------------------------------------
 
 
 	//androidProperty
@@ -198,7 +179,7 @@ public:
 	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void Android_Action_Released(float val);
 
-	UFUNCTION(BlueprintCallable, category = "kusamatFn")
+	UFUNCTION(BlueprintImplementableEvent, category = "kusamatFn")
     void decideMateral();
 	//UFUNCTION(BlueprintCallable, Category = "kusaFun")
 	//void SetCharNumber();
