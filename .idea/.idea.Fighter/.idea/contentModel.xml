@@ -43277,6 +43277,18 @@
           <e p="kusaGameInstance.h" t="Include" />
           <e p="kusaGameMode.cpp" t="Include" />
           <e p="kusaGameMode.h" t="Include" />
+          <e p="menu" t="Include">
+            <e p="playMenu" t="Include">
+              <e p="MenuAnimInstance.cpp" t="Include" />
+              <e p="MenuAnimInstance.h" t="Include" />
+            </e>
+          </e>
+          <e p="Menus" t="Include">
+            <e p="playMenu" t="Include">
+              <e p="MyAnimInstance.cpp" t="Include" />
+              <e p="MyAnimInstance.h" t="Include" />
+            </e>
+          </e>
           <e p="MyChar.cpp" t="Include" />
           <e p="MyChar.h" t="Include" />
           <e p="weapon" t="Include">

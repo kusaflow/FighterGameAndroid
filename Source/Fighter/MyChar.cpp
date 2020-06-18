@@ -71,6 +71,63 @@ void AMyChar::BeginPlay()
 	gameInstance->PHealth = Health;
 	
 	//SetCharNumber();
+
+	if (!bisEnemy) {
+		if (gameInstance->CharMatIndex == 0) {
+			if (mat0)
+				finalMat = mat0;
+		}
+		else if (gameInstance->CharMatIndex == 1) {
+			if (mat1)
+				finalMat = mat1;
+		}
+		else if (gameInstance->CharMatIndex == 2) {
+			if (mat2)
+				finalMat = mat2;
+		}
+		else if (gameInstance->CharMatIndex == 3) {
+			if (mat3)
+				finalMat = mat3;
+		}
+		else if (gameInstance->CharMatIndex == 4) {
+			if (mat4)
+				finalMat = mat4;
+		}
+		else if (gameInstance->CharMatIndex == 5) {
+			if (mat5)
+				finalMat = mat5;
+		}
+	}
+}
+
+void AMyChar :: decideMateral()
+{
+	if (!bisEnemy) {
+		if (gameInstance->CharMatIndex == 1) {
+			if (mat0)
+				finalMat = mat0;
+		}
+		else if (gameInstance->CharMatIndex == 2) {
+			if (mat1)
+				finalMat = mat1;
+		}
+		else if (gameInstance->CharMatIndex == 3) {
+			if (mat2)
+				finalMat = mat2;
+		}
+		else if (gameInstance->CharMatIndex == 4) {
+			if (mat3)
+				finalMat = mat3;
+		}
+		else if (gameInstance->CharMatIndex == 5) {
+			if (mat4)
+				finalMat = mat4;
+		}
+		else if (gameInstance->CharMatIndex == 6) {
+			if (mat5)
+				finalMat = mat5;
+		}
+	}
 }
 
 
