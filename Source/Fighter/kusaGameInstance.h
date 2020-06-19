@@ -14,7 +14,12 @@ class FIGHTER_API UkusaGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
+		
+
 public:
+
+	UkusaGameInstance();
+
 	//player variables
 	UPROPERTY(BlueprintReadWrite)
 	int CharNumberIndex = 2;
@@ -54,7 +59,7 @@ public:
 	bool bWeWon = false;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusacoin")
-	int xp = 10000;
+	int xp = 1000000;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
 	bool bHave_axe= false;
@@ -81,13 +86,16 @@ public:
 
 	//weapons Acttual price
 	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
-	int weaponPrice = 2000;
+	int weaponPrice = 20000;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaHealth")
 	bool bPlayerHitToPlayReaction = false;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaHealth")
 	bool bEnemyHitToPlayReaction = false;
+
+	UFUNCTION(BlueprintCallable, category = "kusaFnx")
+	void saveGame();
 
 
 
