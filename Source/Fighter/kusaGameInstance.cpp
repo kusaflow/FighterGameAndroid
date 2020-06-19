@@ -6,21 +6,21 @@
 #include "Kismet/GameplayStatics.h"
 
 UkusaGameInstance::UkusaGameInstance() {
-	UkusaSaveGame* load = Cast<UkusaSaveGame>(UGameplayStatics::LoadGameFromSlot("kusa", 0));
+	//UkusaSaveGame* load = Cast<UkusaSaveGame>(UGameplayStatics::LoadGameFromSlot("kusa", 0));
 
-	if (load) {
+	//if (load) {
 
-		//load = Cast<UkusaSaveGame>(UGameplayStatics::LoadGameFromSlot("kusa", 0));
+	//	//load = Cast<UkusaSaveGame>(UGameplayStatics::LoadGameFromSlot("kusa", 0));
 
-		xp = load->xp;
-		bHave_axe = load->bHave_axe;
-		bHave_sword = load->bHave_sword;
-		bmat1 = load->bmat1;
-		bmat2 = load->bmat2;
-		bmat3 = load->bmat3;
-		bmat4 = load->bmat4;
-		bmat5 = load->bmat5;
-	}
+	//	xp = load->xp;
+	//	bHave_axe = load->bHave_axe;
+	//	bHave_sword = load->bHave_sword;
+	//	bmat1 = load->bmat1;
+	//	bmat2 = load->bmat2;
+	//	bmat3 = load->bmat3;
+	//	bmat4 = load->bmat4;
+	//	bmat5 = load->bmat5;
+	//}
 }
 
 void UkusaGameInstance::saveGame() {
