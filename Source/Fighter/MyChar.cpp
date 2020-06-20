@@ -46,6 +46,8 @@ void AMyChar::BeginPlay()
 	CharNumberIndex = gameInstance->CharNumberIndex;
 	CharMaterialIndex = gameInstance->CharMatIndex;
 
+	gameInstance->StartFight = false;
+
 	if (CharNumberIndex == 1) {
 		GetCharacterMovement()->MaxWalkSpeed = 218;
 	}
@@ -131,6 +133,15 @@ void AMyChar::Tick(float DeltaTime)
 
 	 //timer to increment energy
 	 HitEnergyShouldBe += 4 * DeltaTime;
+
+	 //time to start fight 
+	 if (timeToStartFight > 200) {
+		 gameInstance->StartFight = true;
+	 }
+	 else {
+		 timeToStartFight += 60 * DeltaTime;
+	 }
+	/////////////////////////////////
 		
 	
 
@@ -483,7 +494,7 @@ void AMyChar::InActionAnimaManager(float dt)
 					}
 					else if (Anim_InActionMotionIndex == 3 && bAnimInMotion)
 					{
-						GetCharacterMovement()->Velocity.X = 1500 * dirFactor;
+						//GetCharacterMovement()->Velocity.X = 1500 * dirFactor;
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
@@ -513,7 +524,7 @@ void AMyChar::InActionAnimaManager(float dt)
 					}
 					else if (Anim_InActionMotionIndex == 3 && bAnimInMotion)
 					{
-						GetCharacterMovement()->Velocity.X = 1500 * dirFactor;
+						//GetCharacterMovement()->Velocity.X = 1500 * dirFactor;
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}
@@ -671,7 +682,7 @@ void AMyChar::InActionAnimaManager(float dt)
 					}
 					else if (Anim_InActionMotionIndex == 3 && bAnimInMotion)
 					{
-						GetCharacterMovement()->Velocity.X = 1000 * dirFactor;
+						//GetCharacterMovement()->Velocity.X = 1000 * dirFactor;
 						Anim_InActionMotionIndex++;
 						bAnimInMotion = false;
 					}

@@ -94,6 +94,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "kusaHealth")
 	bool bEnemyHitToPlayReaction = false;
 
+	UPROPERTY(BlueprintReadWrite, Category = "startGAme")
+	bool StartFight = false;
+
+
 	UFUNCTION(BlueprintCallable, category = "kusaFnx")
 	void saveGame();
 

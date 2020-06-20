@@ -31,7 +31,9 @@ void AEnemyAI::myTick(float dt) {
 
 	//Level_1_AI(dt);
 	
-	l1AI(dt);
+	if (gameInstance->StartFight) {
+		l1AI(dt);
+	}
 
 }
 
@@ -216,7 +218,7 @@ void AEnemyAI::l1AI(float dt) {
 	FVector End = ((ForwardVector * 1100.f) + Start);
 	FCollisionQueryParams CollisionParams;
 
-	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
+	//DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 2);
 	//-1 is forward movement
 
 	//decide the role

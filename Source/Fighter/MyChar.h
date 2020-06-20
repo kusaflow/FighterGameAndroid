@@ -119,6 +119,8 @@ public:
 	//2 for kick
 	//3 for special
 	short PrevActionType_P_K_S = 0;
+
+	float timeToStartFight = 0;
 	
 protected:
 	// Called when the game starts or when spawned
