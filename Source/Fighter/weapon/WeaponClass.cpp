@@ -83,22 +83,22 @@ void AWeaponClass::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 				if (parent->CharNumberIndex == 1 || parent->CharNumberIndex == 2 || parent->CharNumberIndex == 3) {
 					if (parent->PrevActionType_P_K_S == 1) {
 						if (parent->bActionPressed1) {
-							damage = 12;
+							damage = 20;
 						}
 						else {
-							damage = 22;
+							damage = 32;
 						}
 					}
 					else if (parent->PrevActionType_P_K_S == 2) {
 						if (parent->bActionPressed1) {
-							damage = 20;
+							damage = 30;
 						}
 						else {
-							damage = 35;
+							damage = 50;
 						}
 					}
 					else {
-						damage = 8;
+						damage = 13;
 					}
 
 				}

@@ -15,7 +15,10 @@ AEnemyAI::AEnemyAI() {
 }
 
 void AEnemyAI::myBeginPlay() {
-	
+	gameInstance = Cast<UkusaGameInstance>(GetGameInstance());
+	CharMaterialIndex = gameInstance->EnemyMatIndex;
+
+	decideMateral();
 }
 
 void AEnemyAI::myTick(float dt) {
@@ -31,7 +34,7 @@ void AEnemyAI::myTick(float dt) {
 
 	//Level_1_AI(dt);
 	
-	if (gameInstance->StartFight) {
+	if (gameInstance->StartFight && !gameInstance->bisGameOver) {
 		l1AI(dt);
 	}
 
@@ -330,10 +333,30 @@ void AEnemyAI::l1AI(float dt) {
 		if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParams)) {
 			if (OutHit.Actor.Get()->GetActorLocation().X - Start.X <= 200) {
 				//--------------action Set=====================================
+				int typeOfAttack = (int)FMath::FRandRange(1, 4);
 				bPunchOn = false;
-				bKickOn = true;
+				bKickOn = false;
 				bSpecial = false;
-				FirstAction();
+
+				if (typeOfAttack == 1) {
+					bPunchOn = true;
+				}
+				else if (typeOfAttack == 2) {
+					bKickOn = true;
+				}
+				else {
+					bSpecial = true;
+				}
+
+
+				typeOfAttack = (int)FMath::FRandRange(1, 3);
+				if (typeOfAttack == 1) {
+					FirstAction();
+				}
+				else if (typeOfAttack == 2) {
+					SecondAction();
+				}
+
 
 				//sleep time
 				sleepTime = 0;

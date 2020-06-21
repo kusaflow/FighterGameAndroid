@@ -109,6 +109,7 @@ void AMyChar::Tick(float DeltaTime)
 		gameInstance->PHealth = Health;
 		gameInstance->HitEnergyPLayer = HitEnergy;
 
+
 		if (gameInstance->EHealth <= 0 || gameInstance->PHealth <= 0) {
 			gameInstance->bisGameOver = true;
 			gameInstance->bWeWon = true;

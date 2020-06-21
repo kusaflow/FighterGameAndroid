@@ -47,7 +47,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
 	int CharNumberIndex = 0;
 
-	UPROPERTY(BlueprintReadOnly, Category = "kusaActions")
+	UPROPERTY(BlueprintReadWrite, Category = "kusamater")
 	int CharMaterialIndex = 0;
 
 

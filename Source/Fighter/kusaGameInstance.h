@@ -33,7 +33,6 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	int CharMatIndex = 1;
 
-
 	UPROPERTY(BlueprintReadWrite)
 	float EHealth = 0;
 
@@ -59,7 +58,7 @@ public:
 	bool bWeWon = false;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusacoin")
-	int xp = 1000000;
+	int xp = 0;
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaWeapon")
 	bool bHave_axe= false;
@@ -96,6 +95,10 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = "startGAme")
 	bool StartFight = false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "FiveWin")
+	int winCount = 0;
+
 
 
 	UFUNCTION(BlueprintCallable, category = "kusaFnx")

@@ -41,5 +41,8 @@ public :
 
 	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
 	bool bmat5;
+
+	UPROPERTY(BlueprintReadWrite, Category = "FiveWin")
+	int winCount = 0;
 	
 };
