@@ -81,6 +81,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "kusaMaterial")
 	bool bmat5 = false;
 
+	UPROPERTY(BlueprintReadWrite, Category = "AIIndex")
+	int aiIndex= 1;
 
 
 	//weapons Acttual price
